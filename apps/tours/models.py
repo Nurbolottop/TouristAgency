@@ -12,17 +12,17 @@ class Tours(models.Model):
     def __str__(self):
         return self.name_tour
     
-    class Meta():
+    class Meta:
         verbose_name = "Тур"
         verbose_name_plural = "Туры"
         
 class TourDetail(models.Model):
-    tours = models.ForeignKey(
+    toures = models.ForeignKey(
         Tours,
-        on_delete=True,
+        on_delete=models.CASCADE,
         related_name="tourse",
         verbose_name="Туры"
-    )
+        )
     type_tour = models.CharField(max_length=255,verbose_name="Тип тура")
     group_size_tour = models.CharField(max_length=255,verbose_name="Размер группы")
     first_image_tour = models.ImageField(upload_to="tours_image")
@@ -42,7 +42,7 @@ class TourDetail(models.Model):
     def __str__(self):
         return self.destination_tour
     
-    class Meta():
+    class Meta:
         verbose_name = "Информация про тур"
         verbose_name_plural = "Информация про туры"
         

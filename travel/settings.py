@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #apps
     'apps.settings',
-    'apps.tourse',
+    'apps.tours',
     
 ]
 

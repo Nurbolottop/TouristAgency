@@ -28,7 +28,7 @@
             </div>
             <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate1.svg" alt="">
                      </div>
@@ -36,7 +36,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate2.svg" alt="">
                      </div>
@@ -44,7 +44,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate3.svg" alt="">
                      </div>
@@ -52,7 +52,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate4.svg" alt="">
                      </div>
@@ -60,7 +60,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate5.svg" alt="">
                      </div>
@@ -68,7 +68,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate6.svg" alt="">
                      </div>
@@ -76,7 +76,7 @@
                   </a>
                </div>
                <div class="col">
-                  <a class="category-box" href="package.html">
+                  <a class="category-box" href="{%url 'tour'%}">
                      <div class="cate-icon mx-auto">
                         <img src="assets/images/icons/cate7.svg" alt="">
                      </div>
@@ -252,34 +252,34 @@
                </div>
             </div>
             <div class="row d-flex justify-content-center g-4">
+               {%for tour in tour%}
                <div class="col-lg-4 col-md-6 col-sm-10  fadeffect">
                   <div class="package-card-beta">
                      <div class="package-thumb">
-                        <a href="package-details.html"><img src="assets/images/package/best-s1.png" alt=""></a>
+                        <a href="package-details.html"><img src="{{tour.image_tour.url}}" alt=""></a>
                         <p class="card-lavel">
-                           <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
+                           <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
                         </p>
                      </div>
                      <div class="package-card-body">
-                        <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                           Pellentesque habitant morbi.</a>
+                        <h3 class="p-card-title"><a href="package-details.html">{{tour.name_tour}}</a>
                         </h3>
                         <div class="p-card-bottom">
                            <div class="book-btn">
-                              <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
+                              <a href="package-details.html">Посмотреть <i class='bx bxs-right-arrow-alt'></i></a>
                            </div>
                            <div class="p-card-info">
-                              <span>From</span>
-                              <h6>$79.00 <span>Per Person</span></h6>
+                              <span>Для</span>
+                              <h6>Одного человека<span>{{tour.price_tour}}</span></h6>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               
+               {%endfor%}
             </div>
             <div class="package-page-btn text-center mt-60">
-               <a href="package.html" class="button-fill-round">View All</a>
+               <a href="{%url 'tour'%}" class="button-fill-round">View All</a>
             </div>
          </div>
       </div>
@@ -561,7 +561,7 @@
                </div>
                <div class="col-lg-6 col-sm-10">
                   <div class="package-btn text-lg-end">
-                     <a href="package.html" class="button-fill-primary all-package-btn">View All Tour</a>
+                     <a href="{%url 'tour'%}" class="button-fill-primary all-package-btn">View All Tour</a>
                   </div>
                </div>
             </div>
@@ -729,7 +729,7 @@
                            </div>
                         </div>
                         <div class="package-page-btn text-center mt-60">
-                           <a href="package.html" class="button-fill-round">View All Offer</a>
+                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
                         </div>
                      </div>
                      <div class="tab-pane fade" id="pills-offer-tab2" role="tabpanel" aria-labelledby="pills-offer2">
@@ -808,7 +808,7 @@
                            </div>
                         </div>
                         <div class="package-page-btn text-center mt-60">
-                           <a href="package.html" class="button-fill-round">View All Offer</a>
+                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
                         </div>
                      </div>
                      <div class="tab-pane fade" id="pills-offer-tab3" role="tabpanel" aria-labelledby="pills-offer3">
@@ -911,7 +911,7 @@
                            </div>
                         </div>
                         <div class="package-page-btn text-center mt-60">
-                           <a href="package.html" class="button-fill-round">View All Offer</a>
+                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
                         </div>
                      </div>
                   </div>
@@ -1271,7 +1271,7 @@
                         <h4 class="footer-widget-title">Quick Link</h4>
                         <ul class="footer-links">
                            <li><a href="about.html">About Us</a></li>
-                           <li><a href="package.html">Tour Package</a></li>
+                           <li><a href="{%url 'tour'%}">Tour Package</a></li>
                            <li><a href="destination.html">Destination</a></li>
                            <li><a href="guide.html">Tour Guide</a></li>
                            <li><a href="package-details.html">Booking Process</a></li>
