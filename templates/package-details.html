@@ -1,20 +1,8 @@
-<!doctype html>
-<html lang="en">
-   <head>
-      <title>TourX Pro - Travels Tourism Agency HTML Template</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="20x20">
-      <link rel="stylesheet" href="assets/css/select2.min.css">
-      <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-      <link href='assets/css/boxicons.min.css' rel='stylesheet'>
-      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.min.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/responsive.css">
-   </head>
-   <body>
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+{%include 'header.html'%}
+
       <div class="preloader">
          <div class="loader">
             <span></span>
@@ -143,7 +131,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate1.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate1.svg' %}" alt="">
                      </div>
                      <h5>Adventure</h5>
                   </a>
@@ -151,7 +139,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate2.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate2.svg' %}" alt="">
                      </div>
                      <h5>Group Tour</h5>
                   </a>
@@ -159,7 +147,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate3.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate3.svg' %}" alt="">
                      </div>
                      <h5>Couple Tour</h5>
                   </a>
@@ -167,7 +155,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate4.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate4.svg' %}" alt="">
                      </div>
                      <h5>Single Tour</h5>
                   </a>
@@ -175,7 +163,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate5.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate5.svg' %}" alt="">
                      </div>
                      <h5>Honeymoon</h5>
                   </a>
@@ -183,7 +171,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate6.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate6.svg' %}" alt="">
                      </div>
                      <h5>Sea Beach</h5>
                   </a>
@@ -191,7 +179,7 @@
                <div class="col">
                   <a class="category-box" href="package.html">
                      <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate7.svg" alt="">
+                        <img src="{% static 'assets/images/icons/cate7.svg' %}" alt="">
                      </div>
                      <h5>Mountain Tour</h5>
                   </a>
@@ -227,113 +215,7 @@
             </div>
          </div>
       </div>
-      <header>
-         <div class="header-area header-style-one">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
-                     <div class="nav-logo d-flex justify-content-between align-items-center">
-                        <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-                        <div class="d-flex align-items-center gap-4">
-                           <div class="nav-right d-xl-none">
-                              <ul class="nav-actions">
-                                 <li class="category-toggle">
-                                    <i class='bx bx-category'></i>
-                                 </li>
-                                 <li class="search-toggle">
-                                    <i class='bx bx-search-alt'></i>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="mobile-menu d-flex ">
-                              <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
-                              <span class="h-top"></span>
-                              <span class="h-middle"></span>
-                              <span class="h-bottom"></span>
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
-                     <nav class="main-nav float-end">
-                        <div class="inner-logo d-xl-none text-center">
-                           <a href="#"><img src="assets/images/logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                           <li class="has-child-menu">
-                              <a href="javascript:void(0)">Home</a>
-                              <i class="fl flaticon-plus">+</i>
-                              <ul class="sub-menu">
-                                 <li><a href="index.html">Home Style 1</a></li>
-                                 <li><a href="index2.html">Home Style 2</a></li>
-                                 <li><a href="index3.html">Home Style 3</a></li>
-                                 <li><a href="index4.html">Home Style 4</a></li>
-                              </ul>
-                           </li>
-                           <li><a href="about.html">About Us</a></li>
-                           <li class="has-child-menu">
-                              <a href="javascript:void(0)">Destination</a>
-                              <i class="fl flaticon-plus">+</i>
-                              <ul class="sub-menu">
-                                 <li><a href="destination.html">Destination</a></li>
-                                 <li><a href="destination-details.html">Destination Details</a></li>
-                              </ul>
-                           </li>
-                           <li class="has-child-menu">
-                              <a href="javascript:void(0)">Package</a>
-                              <i class="fl flaticon-plus">+</i>
-                              <ul class="sub-menu">
-                                 <li><a href="package.html">Package Grid</a></li>
-                                 <li><a href="package-sidebar.html">Package Sidebar</a></li>
-                                 <li><a href="package-standard.html">Package Standard</a></li>
-                                 <li><a href="package-details.html">Package Details </a></li>
-                              </ul>
-                           </li>
-                           <li class="has-child-menu">
-                              <a href="javascript:void(0)">Blogs</a>
-                              <i class="fl flaticon-plus">+</i>
-                              <ul class="sub-menu">
-                                 <li><a href="blog.html">Blog Grid</a></li>
-                                 <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                 <li><a href="blog-standard.html">Blog Standard </a></li>
-                                 <li><a href="blog-details.html">Blog Details</a></li>
-                              </ul>
-                           </li>
-                           <li class="has-child-menu">
-                              <a href="javascript:void(0)">Pages</a>
-                              <i class="fl flaticon-plus">+</i>
-                              <ul class="sub-menu">
-                                 <li><a href="guide.html">Guide</a></li>
-                                 <li><a href="gallary.html">Gallary</a></li>
-                                 <li><a href="faq.html">FAQ</a></li>
-                                 <li><a href="404.html">404</a></li>
-                              </ul>
-                           </li>
-                           <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                        <div class="inner-contact-options d-xl-none">
-                           <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></div>
-                           <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#6d04030b022d08150c001d0108430e0200"><span class="__cf_email__" data-cfemail="eb82858d84ab8e938a869b878ec5888486">[email&#160;protected]</span></a></div>
-                        </div>
-                     </nav>
-                  </div>
-                  <div class="col-xl-2">
-                     <div class="nav-right float-end d-xl-flex d-none ">
-                        <ul class="nav-actions">
-                           <li class="category-toggle">
-                              <i class='bx bx-category'></i>
-                           </li>
-                           <li class="search-toggle">
-                              <i class='bx bx-search-alt'></i>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </header>
+
       <div class="breadcrumb breadcrumb-style-one">
          <div class="container">
             <div class="col-lg-12 text-center">
@@ -355,54 +237,46 @@
                            <div class="col">
                               <div class="pd-single-info">
                                  <div class="info-icon">
-                                    <img src="assets/images/icons/pd1.svg" alt="">
+                                    <img src="{% static 'assets/images/icons/pd1.svg' %}" alt="">
                                  </div>
                                  <div class="info">
-                                    <h6>Duration</h6>
-                                    <span>4 Days</span>
+                                    <h9>Продолжительность
+
+                                       </h9>
+                                    <span>{{tour.time_tour}}</span>
                                  </div>
                               </div>
                            </div>
                            <div class="col">
                               <div class="pd-single-info">
                                  <div class="info-icon">
-                                    <img src="assets/images/icons/pd2.svg" alt="">
+                                    <img src="{% static 'assets/images/icons/pd2.svg' %}" alt="">
                                  </div>
                                  <div class="info">
-                                    <h6>Tour Type</h6>
-                                    <span>Daily Tour</span>
+                                    <h6>Тип тура</h6>
+                                    <span>{{tour.type_tour}}</span>
                                  </div>
                               </div>
                            </div>
                            <div class="col">
                               <div class="pd-single-info">
                                  <div class="info-icon">
-                                    <img src="assets/images/icons/pd3.svg" alt="">
+                                    <img src="{% static 'assets/images/icons/pd3.svg' %}" alt="">
                                  </div>
                                  <div class="info">
-                                    <h6>Group Size</h6>
-                                    <span>30 People</span>
+                                    <h6>Размер группы</h6>
+                                    <span>{{tour.group_size_tour}}</span>
                                  </div>
                               </div>
                            </div>
-                           <div class="col">
-                              <div class="pd-single-info">
-                                 <div class="info-icon">
-                                    <img src="assets/images/icons/pd4.svg" alt="">
-                                 </div>
-                                 <div class="info">
-                                    <h6>Tour Guide</h6>
-                                    <span>05 People</span>
-                                 </div>
-                              </div>
-                           </div>
+                           
                         </div>
                         <div class="pd-thumb">
-                           <img src="assets/images/package/pd-thumb.png" alt="">
+                           <img src="{{tour.image_tour.url}}" alt="">
                         </div>
                         <div class="header-bottom">
                            <div class="pd-lavel d-flex justify-content-between align-items-center flex-wrap gap-2">
-                              <h5 class="location"><i class="bi bi-geo-alt"></i> Mount Dtna, Spain</h5>
+                              <h5 class="location"><i class="bi bi-geo-alt"></i>{{tour.destination_tour}}</h5>
                               <ul class="d-flex align-items-center rating">
                                  <li><i class="bi bi-star-fill"></i></li>
                                  <li><i class="bi bi-star-fill"></i></li>
@@ -411,11 +285,11 @@
                                  <li><i class="bi bi-star-fill"></i></li>
                               </ul>
                            </div>
-                           <h2 class="pd-title">San Francisco Golden Gate Bridge.</h2>
+                           <h2 class="pd-title">{{tour.name_tour}}</h2>
                         </div>
                      </div>
-                     <div class="package-details-tabs">
-                        <ul class="nav nav-pills tab-switchers gap-xxl-4 gap-3" id="pills-tab" role="tablist">
+                      <div class="package-details-tabs">
+                        {% comment %} <ul class="nav nav-pills tab-switchers gap-xxl-4 gap-3" id="pills-tab" role="tablist">
                            <li class="nav-item" role="presentation">
                               <button class="nav-link active" id="pills-package1" data-bs-toggle="pill" data-bs-target="#pill-body1" type="button" role="tab" aria-controls="pill-body1" aria-selected="true"><i class="bi bi-info-lg"></i> Information</button>
                            </li>
@@ -428,107 +302,90 @@
                            <li class="nav-item" role="presentation">
                               <button class="nav-link" id="pills-package4" data-bs-toggle="pill" data-bs-target="#pill-body4" type="button" role="tab" aria-controls="pill-body4" aria-selected="false"><i class="bi bi-geo-alt"></i> Location</button>
                            </li>
-                        </ul>
+                        </ul> {% endcomment %}
                         <div class="tab-content" id="pills-tabContent">
                            <div class="tab-pane fade show active package-info-tab mt-3" id="pill-body1" role="tabpanel" aria-labelledby="pills-package1">
-                              <h3 class="d-subtitle">Package Details</h3>
-                              <p>Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.Pellentesque accumsan magna in augue sagittis, non fringilla eros molestie. Sed feugiat mi nec ex vehicula, nec vestibulum orci semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec tristique commodo fringilla. Duis aliquet varius mauris eget rutrum. Nullam sit amet justo consequat, bibendum orci in, convallis enim. Proin convallis neque viverra finibus cursus. Mauris lacinia lacinia erat in finibus. In non enim libero.</p>
+                              <h3 class="d-subtitle">Детали пакета</h3>
+                              <p>{{tour.description_tour}}</p>
                               <div class="p-info-featured-img row position-relative g-4 row-cols-1 row-cols-sm-2">
                                  <div class="col">
                                     <div class="featured-img">
-                                       <img src="assets/images/package/feat-img1.png" alt="">
+                                       <img src="{{tour.first_image_tour.url}}" alt="">
                                     </div>
                                  </div>
                                  <div class="col">
                                     <div class="featured-img">
-                                       <img src="assets/images/package/feat-img2.png" alt="">
+                                       <img src="{{tour.second_image_tour.url}}" alt="">
                                     </div>
                                  </div>
-                                 <div class="featured-video position-absolute ">
-                                    <img src="assets/images/package/feat-img3.png" alt="">
-                                    <div class="video-overlay">
-                                       <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-icon video-popup" data-fancybox>
-                                       <i class="bi bi-play-fill"></i>
-                                       </a>
-                                    </div>
-                                 </div>
+                                 
                               </div>
                               <table class="table package-info-table mb-0">
                                  <tbody>
                                     <tr>
-                                       <th>Destination</th>
-                                       <td>New York City</td>
+                                       <th>Место назначения</th>
+                                       <td>{{tour.destination_tour}}</td>
                                     </tr>
                                     <tr>
-                                       <th>Depature</th>
-                                       <td>Yes Required</td>
+                                       <th>Отъезд</th>
+                                       <td>{{tour.depature_tour}}</td>
                                     </tr>
                                     <tr>
-                                       <th>Departure Time</th>
-                                       <td>01 April, 2021 10.00AM</td>
+                                       <th>Время отправления</th>
+                                       <td>{{tour.departure_time_tour}}</td>
                                     </tr>
                                     <tr>
-                                       <th>Return Time</th>
-                                       <td>08 April, 2021 10.00AM</td>
+                                       <th>Время возврата</th>
+                                       <td>{{tour.return_time_tour}}</td>
                                     </tr>
                                     <tr>
-                                       <th>Included</th>
+                                       <th>Включено</th>
                                        <td>
                                           <ul class="included-list">
-                                             <li><i class="bi bi-check2"></i>Specilaized Bilingual Guide</li>
-                                             <li> <i class="bi bi-check2"></i>Private Transport</li>
-                                             <li><i class="bi bi-check2"></i> Entrance Fees</li>
-                                             <li><i class="bi bi-check2"></i> Box Lunch,Water,Dinner and Snacks</li>
+                                             <li><i class="bi bi-check2"></i>{{tour.included_tour}}</li>
+                                            
                                           </ul>
                                        </td>
                                     </tr>
                                     <tr>
-                                       <th>Excluded</th>
+                                       <th>Исключенный</th>
                                        <td>
                                           <ul class="excluded-list">
-                                             <li><i class="bi bi-x-lg"></i> Additional Services</li>
-                                             <li> <i class="bi bi-x-lg"></i> Insurance</li>
-                                             <li><i class="bi bi-x-lg"></i> Drink</li>
-                                             <li><i class="bi bi-x-lg"></i> Tickets</li>
+                                             <li><i class="bi bi-x-lg"></i>{{tour.excluded_tour}}</li>
+                                            
                                           </ul>
                                        </td>
                                     </tr>
                                     <tr>
                                        <td colspan="2" class="tour-transport-col">
-                                          <div class="tour-transport  d-flex align-items-center justify-content-center"><img src="assets/images/icons/bus.svg" alt=""> <span>Travel With Bus</span></div>
                                        </td>
                                     </tr>
                                  </tbody>
                               </table>
                               <div class="rating-overview">
-                                 <h3 class="d-subtitle">Overview</h3>
+                                 <h3 class="d-subtitle">Обзор</h3>
                                  <div class="rating-overview-row row g-0">
-                                    <div class="col-lg-4 col-md-5 col-sm-5">
-                                       <div class="total-rating d-flex justify-content-center align-items-center flex-column h-100 ">
-                                          <h3>10.00</h3>
-                                          <h5>Excellent</h5>
-                                       </div>
-                                    </div>
+                                    
                                     <div class="col-lg-8 col-md-7 col-sm-7">
                                        <div class="rating-info">
                                           <div class="rating-box">
-                                             <h6>Accommodation <span>5.0</span></h6>
+                                             <h6>Жилье <span>{{tour.accommodation_tour}}</span></h6>
+                                             <div class="rating-bar"></div>
+                                          </div>
+                                          <div class="rating-box" data-progress=""{{lesson.number}}%">
+                                             <h6>Транспорт <span>{{tour.transport_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
                                           <div class="rating-box">
-                                             <h6>Transport <span>5.0</span></h6>
+                                             <h6>Комфорт <span>{{tour.comfort_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
                                           <div class="rating-box">
-                                             <h6>Comfort <span>5.0</span></h6>
+                                             <h6>Гостеприимство <span>{{tour.hospitality_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
                                           <div class="rating-box">
-                                             <h6>Hospitality <span>5.0</span></h6>
-                                             <div class="rating-bar"></div>
-                                          </div>
-                                          <div class="rating-box">
-                                             <h6>Food <span>5.0</span></h6>
+                                             <h6>Еда <span>{{tour.food_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
                                        </div>
@@ -539,7 +396,7 @@
                                  <ul class="comment-list">
                                     <li class="single-comment d-flex flex-sm-row flex-column ">
                                        <div class="commmentor">
-                                          <img src="assets/images/reviewer/commertor2.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/commertor2.png' %}" alt="">
                                        </div>
                                        <div class="comment mt-4 mt-sm-0">
                                           <div class="d-flex align-items-center justify-content-between">
@@ -563,7 +420,7 @@
                                     </li>
                                     <li class="single-comment d-flex flex-sm-row flex-column">
                                        <div class="commmentor">
-                                          <img src="assets/images/reviewer/commertor3.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/commertor3.png' %}" alt="">
                                        </div>
                                        <div class="comment mt-4 mt-sm-0">
                                           <div class="d-flex align-items-center justify-content-between">
@@ -587,7 +444,7 @@
                                     </li>
                                     <li class="single-comment d-flex flex-sm-row flex-column">
                                        <div class="commmentor">
-                                          <img src="assets/images/reviewer/commertor1.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/commertor1.png' %}" alt="">
                                        </div>
                                        <div class="comment mt-4 mt-sm-0">
                                           <div class="d-flex align-items-center justify-content-between">
@@ -780,47 +637,47 @@
                               <div class="row g-4">
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-1.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-1.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-1.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-1.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-2.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-2.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-2.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-2.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-12">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgx-1.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgx-1.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgx-1.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgx-1.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-3.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-3.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-3.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-3.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-4.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-4.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-4.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-4.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-12">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgx-2.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgx-2.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgx-2.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgx-2.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-5.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-5.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-5.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-5.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-6">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgl-6.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgl-6.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgl-6.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgl-6.png' %}" alt=""></a>
                                     </div>
                                  </div>
                                  <div class="col-12">
                                     <div class="package-gallary-item">
-                                       <a href="assets/images/gallary/pgx-3.png" data-fancybox="gallery" data-caption="Caption Here"><img src="assets/images/gallary/pgx-3.png" alt=""></a>
+                                       <a href="{% static 'assets/images/gallary/pgx-3.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgx-3.png' %}" alt=""></a>
                                     </div>
                                  </div>
                               </div>
@@ -833,7 +690,7 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div> 
                   </div>
                </div>
                <div class="col-lg-4">
@@ -913,7 +770,7 @@
                               <li class="package-sm">
                                  <div class="thumb">
                                     <a href="package-details.html">
-                                    <img src="assets/images/package/package-sm4.png" alt="">
+                                    <img src="{% static 'assets/images/package/package-sm4.png' %}" alt="">
                                     </a>
                                  </div>
                                  <div class="info">
@@ -927,7 +784,7 @@
                               <li class="package-sm">
                                  <div class="thumb">
                                     <a href="package-details.html">
-                                    <img src="assets/images/package/package-sm3.png" alt="">
+                                    <img src="{% static 'assets/images/package/package-sm3.png' %}" alt="">
                                     </a>
                                  </div>
                                  <div class="info">
@@ -943,7 +800,7 @@
                               <li class="package-sm">
                                  <div class="thumb">
                                     <a href="package-details.html">
-                                    <img src="assets/images/package/package-sm2.png" alt="">
+                                    <img src="{% static 'assets/images/package/package-sm2.png' %}" alt="">
                                     </a>
                                  </div>
                                  <div class="info">
@@ -959,7 +816,7 @@
                               <li class="package-sm">
                                  <div class="thumb">
                                     <a href="package-details.html">
-                                    <img src="assets/images/package/package-sm1.png" alt="">
+                                    <img src="{% static 'assets/images/package/package-sm1.png' %}" alt="">
                                     </a>
                                  </div>
                                  <div class="info">
@@ -973,7 +830,7 @@
                            </ul>
                         </div>
                      </aside>
-                     <aside class="package-widget-style-2 widget-tag-cloud mt-30">
+                     {% comment %} <aside class="package-widget-style-2 widget-tag-cloud mt-30">
                         <div class="widget-title text-center">
                            <h4>Package Tag</h4>
                         </div>
@@ -987,12 +844,12 @@
                            <a href="#">Weekend</a>
                            <a href="#">Hill</a>
                         </div>
-                     </aside>
-                     <aside class="widget-banner mt-30">
+                     </aside> {% endcomment %}
+                     {% comment %} <aside class="widget-banner mt-30">
                         <a href="#">
-                        <img src="assets/images/banner/sidebar-banner.png" alt="" class="img-fluid">
+                        <img src="{% static 'assets/images/banner/sidebar-banner.png' %}" alt="" class="img-fluid">
                         </a>
-                     </aside>
+                     </aside> {% endcomment %}
                   </div>
                </div>
             </div>
@@ -1001,7 +858,7 @@
       <div class="footer-area mt-110">
          <div class="footer-main-wrapper">
             <div class="footer-vactor">
-               <img src="assets/images/banner/footer-bg.png" alt="">
+               <img src="{% static 'assets/images/banner/footer-bg.png' %}" alt="">
             </div>
             <div class="container">
                <div class="row justify-content-center g-4">
@@ -1050,22 +907,22 @@
                         <h4 class="footer-widget-title text-center">Gallery</h4>
                         <div class="footer-gallary-grid">
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-1.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-1.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-1.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-1.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-2.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-2.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-2.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-2.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-3.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-3.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-3.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-3.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-4.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-4.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-4.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-4.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-5.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-5.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-5.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-5.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-6.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-6.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-6.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-6.png' %}" alt=""></a>
                            </div>
                         </div>
                      </div>
@@ -1091,7 +948,7 @@
                   </div>
                   <div class="col-lg-4  order-lg-2 order-1">
                      <div class="footer-logo text-center">
-                        <a href="index.html"><img src="assets/images/logo-w.png" alt=""></a>
+                        <a href="index.html"><img src="{% static 'assets/images/logo-w.png' %}" alt=""></a>
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6 order-lg-3 order-2">
@@ -1106,14 +963,4 @@
             </div>
          </div>
       </div>
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/chain_fade.js"></script>
-      <script src="assets/js/owl.carousel.min.js"></script>
-      <script src="assets/js/swiper-bundle.min.js"></script>
-      <script src="assets/js/jquery.fancybox.min.js"></script>
-      <script src="assets/js/select2.min.js"></script>
-      <script src="assets/js/jquery-ui.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
-</html>
+{%endblock%}

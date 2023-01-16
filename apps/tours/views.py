@@ -13,8 +13,9 @@ def tour(request):
     return render(request,'package.html',context)
 
 def tour_detail(request,id):
-    tour = Tours.objects.all()
-    settings = Settings.objects.get(id = id)
+    tour = Tours.objects.get(id = id)   
+    
+    settings = Settings.objects.latest('id')
     context = {
         'settings':settings,
         'tour':tour

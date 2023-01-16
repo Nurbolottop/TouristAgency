@@ -24,7 +24,7 @@ from apps.tours.views import tour,tour_detail
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
-    path('tours', tour, name="tour"),
+    path('tours/', tour, name="tour"),
     path('tours_detail/<int:id>/', tour_detail, name="tour_detail"),
     
 ]

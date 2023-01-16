@@ -3,92 +3,92 @@
 {%load static %}
 {%block content%}
 
-      <div class="mobile-search">
-         <div class="container">
-            <div class="row d-flex justify-content-center">
-               <div class="col-md-11">
-                  <label>What are you lookking for?</label>
-                  <input type="text" placeholder="Search Products, Category, Brand">
-               </div>
-               <div class="col-1 d-flex justify-content-end align-items-center">
-                  <div class="search-cross-btn">
-                     <i class="bi bi-x"></i>
-                  </div>
-               </div>
+<div class="mobile-search">
+   <div class="container">
+      <div class="row d-flex justify-content-center">
+         <div class="col-md-11">
+            <label>What are you lookking for?</label>
+            <input type="text" placeholder="Search Products, Category, Brand">
+         </div>
+         <div class="col-1 d-flex justify-content-end align-items-center">
+            <div class="search-cross-btn">
+               <i class="bi bi-x"></i>
             </div>
          </div>
       </div>
-      <div class="category-sidebar-wrapper">
-         <div class="category-sidebar">
-            <div class="category-header d-flex justify-content-between align-items-center">
-               <h4>Category</h4>
-               <div class="category-toggle">
-                  <i class="bi bi-x-lg"></i>
-               </div>
-            </div>
-            <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate1.svg" alt="">
-                     </div>
-                     <h5>Adventure</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate2.svg" alt="">
-                     </div>
-                     <h5>Group Tour</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate3.svg" alt="">
-                     </div>
-                     <h5>Couple Tour</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate4.svg" alt="">
-                     </div>
-                     <h5>Single Tour</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate5.svg" alt="">
-                     </div>
-                     <h5>Honeymoon</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate6.svg" alt="">
-                     </div>
-                     <h5>Sea Beach</h5>
-                  </a>
-               </div>
-               <div class="col">
-                  <a class="category-box" href="{%url 'tour'%}">
-                     <div class="cate-icon mx-auto">
-                        <img src="assets/images/icons/cate7.svg" alt="">
-                     </div>
-                     <h5>Mountain Tour</h5>
-                  </a>
-               </div>
-            </div>
+   </div>
+</div>
+<div class="category-sidebar-wrapper">
+   <div class="category-sidebar">
+      <div class="category-header d-flex justify-content-between align-items-center">
+         <h4>Category</h4>
+         <div class="category-toggle">
+            <i class="bi bi-x-lg"></i>
          </div>
       </div>
+      <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate1.svg' %}" alt="">
+               </div>
+               <h5>Adventure</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate2.svg' %}" alt="">
+               </div>
+               <h5>Group Tour</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate3.svg' %}" alt="">
+               </div>
+               <h5>Couple Tour</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate4.svg' %}" alt="">
+               </div>
+               <h5>Single Tour</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate5.svg' %}" alt="">
+               </div>
+               <h5>Honeymoon</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate6.svg' %}" alt="">
+               </div>
+               <h5>Sea Beach</h5>
+            </a>
+         </div>
+         <div class="col">
+            <a class="category-box" href="{%url 'tour'%}">
+               <div class="cate-icon mx-auto">
+                  <img src="{% static 'assets/images/icons/cate7.svg' %}" alt="">
+               </div>
+               <h5>Mountain Tour</h5>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
       {%include "header.html"%}
       <div class="hero-area hero-style-three">
-         <img src="assets/images/banner/banner-plane.svg" class="img-fluid banner-plane">
+         <img src="{% static 'assets/images/banner/banner-plane.svg' %}" class="img-fluid banner-plane">
          <div class="hero-main-wrapper position-relative">
             <div class="hero-social">
                <ul class="social-list d-flex justify-content-center align-items-center gap-4">
@@ -256,21 +256,22 @@
                <div class="col-lg-4 col-md-6 col-sm-10  fadeffect">
                   <div class="package-card-beta">
                      <div class="package-thumb">
-                        <a href="package-details.html"><img src="{{tour.image_tour.url}}" alt=""></a>
+                        <a href="{% url 'tour_detail' tour.id%}"><img src="{{tour.image_tour.url}}" alt=""></a>
                         <p class="card-lavel">
                            <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
                         </p>
                      </div>
                      <div class="package-card-body">
-                        <h3 class="p-card-title"><a href="package-details.html">{{tour.name_tour}}</a>
+                        <h3 class="p-card-title"><a href="{% url 'tour_detail' tour.id%}">{{tour.name_tour}}</a>
                         </h3>
                         <div class="p-card-bottom">
                            <div class="book-btn">
-                              <a href="package-details.html">Посмотреть <i class='bx bxs-right-arrow-alt'></i></a>
+                              <a href="{% url 'tour_detail' tour.id%}">Посмотреть <i class='bx bxs-right-arrow-alt'></i></a>
                            </div>
                            <div class="p-card-info">
                               <span>Для</span>
-                              <h6>Одного человека<span>{{tour.price_tour}}</span></h6>
+                              <h6><span>Одного человека</span>{{tour.price_tour}}</h6>
+
                            </div>
                         </div>
                      </div>
@@ -297,7 +298,7 @@
                <div class="col-lg-6 col-md-12 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds1.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds1.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -314,7 +315,7 @@
                <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds2.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds2.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -331,7 +332,7 @@
                <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds3.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds3.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -348,7 +349,7 @@
                <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds4.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds4.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -365,7 +366,7 @@
                <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds5.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds5.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -382,7 +383,7 @@
                <div class="col-lg-6 col-md-12 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="assets/images/destination/top-ds6.png" alt="">
+                        <img src="{% static 'assets/images/destination/top-ds6.png' %}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
@@ -422,7 +423,7 @@
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="assets/images/package/best-s1.png" alt=""></a>
+                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s1.png' %}" alt=""></a>
                                  <p class="card-lavel">
                                     <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                  </p>
@@ -446,7 +447,7 @@
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="assets/images/package/best-s2.png" alt=""></a>
+                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s2.png' %}" alt=""></a>
                                  <p class="card-lavel">
                                     <i class="bi bi-clock"></i> <span>5 Day & 6 night</span>
                                  </p>
@@ -470,7 +471,7 @@
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="assets/images/package/best-s3.png" alt=""></a>
+                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s3.png' %}" alt=""></a>
                                  <p class="card-lavel">
                                     <i class="bi bi-clock"></i> <span>4 Day & 3 night</span>
                                  </p>
@@ -494,7 +495,7 @@
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="assets/images/package/best-s4.png" alt=""></a>
+                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s4.png' %}" alt=""></a>
                                  <p class="card-lavel">
                                     <i class="bi bi-clock"></i> <span>5 Day & 6 night</span>
                                  </p>
@@ -518,7 +519,7 @@
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="assets/images/package/best-s5.png" alt=""></a>
+                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s5.png' %}" alt=""></a>
                                  <p class="card-lavel">
                                     <i class="bi bi-clock"></i> <span>4 Day & 3 night</span>
                                  </p>
@@ -586,7 +587,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer1.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer1.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -610,7 +611,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer2.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer2.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -634,7 +635,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer3.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer3.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -658,7 +659,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer4.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer4.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -682,7 +683,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer5.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer5.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -706,7 +707,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer6.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -737,7 +738,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer6.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -761,7 +762,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer1.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer1.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -785,7 +786,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer2.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer2.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -816,7 +817,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer5.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer5.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -840,7 +841,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer6.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -864,7 +865,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer3.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer3.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -888,7 +889,7 @@
                            <div class="col-lg-4 col-md-6 fadeffect">
                               <div class="package-card-beta">
                                  <div class="package-thumb">
-                                    <a href="package-details.html"><img src="assets/images/destination/lastoffer4.png" alt=""></a>
+                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer4.png' %}" alt=""></a>
                                     <p class="card-lavel">
                                        <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
                                     </p>
@@ -942,13 +943,13 @@
                         <div class="swiper-slide">
                            <div class="testimonial-card-beta mx-auto">
                               <div class="testimonial-quote-icon">
-                                 <img src="assets/images/icons/quote-review.svg" class="img-fluid" />
+                                 <img src="{% static 'assets/images/icons/quote-review.svg' %}" class="img-fluid" />
                               </div>
                               <div class="testimonial-card-body">
                                  <div class="testimonial-info">
                                     <div class="reviewr-info">
                                        <div class="single-thumb">
-                                          <img src="assets/images/reviewer/testi31.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/testi31.png' %}" alt="">
                                        </div>
                                        <div class="reviwer-info-cotn">
                                           <h5 class="reviewer-name">Jims Pull</h5>
@@ -983,13 +984,13 @@
                         <div class="swiper-slide">
                            <div class="testimonial-card-beta mx-auto">
                               <div class="testimonial-quote-icon">
-                                 <img src="assets/images/icons/quote-review.svg" class="img-fluid" />
+                                 <img src="{% static 'assets/images/icons/quote-review.svg' %}" class="img-fluid" />
                               </div>
                               <div class="testimonial-card-body">
                                  <div class="testimonial-info">
                                     <div class="reviewr-info">
                                        <div class="single-thumb">
-                                          <img src="assets/images/reviewer/testi32.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/testi32.png' %}" alt="">
                                        </div>
                                        <div class="reviwer-info-cotn">
                                           <h5 class="reviewer-name">Shwan Pull</h5>
@@ -1024,13 +1025,13 @@
                         <div class="swiper-slide">
                            <div class="testimonial-card-beta mx-auto">
                               <div class="testimonial-quote-icon">
-                                 <img src="assets/images/icons/quote-review.svg" class="img-fluid" />
+                                 <img src="{% static 'assets/images/icons/quote-review.svg' %}" class="img-fluid" />
                               </div>
                               <div class="testimonial-card-body">
                                  <div class="testimonial-info">
                                     <div class="reviewr-info">
                                        <div class="single-thumb">
-                                          <img src="assets/images/reviewer/testi33.png" alt="">
+                                          <img src="{% static 'assets/images/reviewer/testi33.png' %}" alt="">
                                        </div>
                                        <div class="reviwer-info-cotn">
                                           <h5 class="reviewer-name">Mixis Pull</h5>
@@ -1082,7 +1083,7 @@
                <div class="col-lg-4 col-md-6 col-md-10">
                   <div class="guide-card-beta">
                      <div class="guide-image">
-                        <img src="assets/images/guide/guide31.png" alt="">
+                        <img src="{% static 'assets/images/guide/guide31.png' %}" alt="">
                         <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
                            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
                            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
@@ -1103,7 +1104,7 @@
                <div class="col-lg-4 col-md-6 col-md-10">
                   <div class="guide-card-beta">
                      <div class="guide-image">
-                        <img src="assets/images/guide/guide32.png" alt="">
+                        <img src="{% static 'assets/images/guide/guide32.png' %}" alt="">
                         <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
                            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
                            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
@@ -1124,7 +1125,7 @@
                <div class="col-lg-4 col-md-6 col-md-10">
                   <div class="guide-card-beta">
                      <div class="guide-image">
-                        <img src="assets/images/guide/guide33.png" alt="">
+                        <img src="{% static 'assets/images/guide/guide33.png' %}" alt="">
                         <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
                            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
                            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
@@ -1165,7 +1166,7 @@
                   <div class="blog-card-beta">
                      <div class="blog-thumb">
                         <a href="blog-details.html">
-                        <img src="assets/images/blog/home3-blog1.png" alt="">
+                        <img src="{% static 'assets/images/blog/home3-blog1.png' %}" alt="">
                         </a>
                         <div class="blog-lavel">
                            <a href="#">Novembar 16, 2021</a>
@@ -1186,7 +1187,7 @@
                   <div class="blog-card-beta">
                      <div class="blog-thumb">
                         <a href="blog-details.html">
-                        <img src="assets/images/blog/home3-blog2.png" alt="">
+                        <img src="{% static 'assets/images/blog/home3-blog2.png' %}" alt="">
                         </a>
                         <div class="blog-lavel">
                            <a href="#">Novembar 16, 2021</a>
@@ -1207,7 +1208,7 @@
                   <div class="blog-card-beta">
                      <div class="blog-thumb">
                         <a href="blog-details.html">
-                        <img src="assets/images/blog/home3-blog3.png" alt="">
+                        <img src="{% static 'assets/images/blog/home3-blog3.png' %}" alt="">
                         </a>
                         <div class="blog-lavel">
                            <a href="#">Novembar 16, 2021</a>
@@ -1245,7 +1246,7 @@
       <div class="footer-area">
          <div class="footer-main-wrapper">
             <div class="footer-vactor">
-               <img src="assets/images/banner/footer-bg.png" alt="">
+               <img src="{% static 'assets/images/banner/footer-bg.png' %}" alt="">
             </div>
             <div class="container">
                <div class="row justify-content-center g-4">
@@ -1296,22 +1297,22 @@
                         <h4 class="footer-widget-title text-center">Gallery</h4>
                         <div class="footer-gallary-grid">
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-1.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-1.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-1.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-1.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-2.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-2.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-2.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-2.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-3.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-3.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-3.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-3.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-4.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-4.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-4.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-4.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-5.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-5.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-5.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-5.png' %}" alt=""></a>
                            </div>
                            <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-6.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-6.png" alt=""></a>
+                              <a href="{% static 'assets/images/gallary/fg-6.png' %}" data-fancybox="footer" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/fg-6.png' %}" alt=""></a>
                            </div>
                         </div>
                      </div>
@@ -1337,7 +1338,7 @@
                   </div>
                   <div class="col-lg-4  order-lg-2 order-1">
                      <div class="footer-logo text-center">
-                        <a href="index.html"><img src="assets/images/logo-w.png" alt=""></a>
+                        <a href="index.html"><img src="{% static 'assets/images/logo-w.png' %}" alt=""></a>
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-6 order-lg-3 order-2">
