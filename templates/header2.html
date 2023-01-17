@@ -189,8 +189,8 @@
          <div class="col-xl-4 align-items-center d-xl-flex d-none">
             <div class="topbar-contact-left">
                <ul class="contact-list">
-                  <li><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">{{contact.phone_site}}</a></li>
-                  <li><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#076e69616847627f666a776b622964686a"><span class="__cf_email__" data-cfemail="ea83848c85aa8f928b879a868fc4898587">{{contact.email_site}}</span></a></li>
+                  <li><i class="bi bi-telephone-fill"></i> <a >{{contact.phone_site}}</a></li>
+                  <li><i class="bi bi-envelope-fill"></i> <a ><span class="__cf_email__" data-cfemail="ea83848c85aa8f928b879a868fc4898587">{{contact.email_site}}</span></a></li>
                </ul>
             </div>
          </div>
@@ -201,10 +201,25 @@
          </div>
          <div class="col-xl-3 col-lg-6 col-md-6 d-md-flex  d-none align-items-center justify-content-end">
             <ul class="topbar-social-links">
-               <li><a href="{{contact.facebook_site}}"><i class='bx bxl-facebook'></i></a></li>
-               <li><a href="{{contact.instagram_site}}"><i class='bx bxl-instagram-alt'></i></a></li>
-               <li><a href="{{contact.youtube_site}}"><i class='bx bxl-youtube'></i></a></li>
-               <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp-square"></i></a></li>
+               {%if contact.instagram_site%}
+
+                        <li><a href="{{contact.instagram_site}}"><i class="bx bxl-instagram"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.facebook_site%}
+
+                        <li><a href="{{contact.facebook_site}}"><i class="bx bxl-facebook"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.youtube_site%}
+
+                        <li><a href="{{contact.youtube_site}}"><i class="bx bxl-youtube"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.whatsapp_site%}
+
+                        <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp"></i></a></li>
+                        {%endif%}
             </ul>
          </div>
       </div>

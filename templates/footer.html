@@ -12,10 +12,26 @@
                    <div class="footer-social-wrap">
                       <h5>Подпишитесь на нас в:</h5>
                       <ul class="footer-social-links justify-content-lg-start justify-content-center">
+                        {%if contact.instagram_site%}
+
                         <li><a href="{{contact.instagram_site}}"><i class="bx bxl-instagram"></i></a>Instagram</li>
+                        {%endif%}
+
+                        {%if contact.facebook_site%}
+
                         <li><a href="{{contact.facebook_site}}"><i class="bx bxl-facebook"></i></a>Facebook</li>
+                        {%endif%}
+
+                        {%if contact.youtube_site%}
+
                         <li><a href="{{contact.youtube_site}}"><i class="bx bxl-youtube"></i></a>Youtube</li>
+                        {%endif%}
+
+                        {%if contact.whatsapp_site%}
+
                         <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp"></i></a>Whatsapp</li>
+                        {%endif%}
+
                      </ul>
                    </div>
                 </div>
@@ -27,7 +43,7 @@
                       <li><a href="about.html">О нас</a></li>
                       <li><a href="{% url 'tour'%}">Заказать тур</a></li>
                       <li><a href="destination.html">Ж/Д Билеты</a></li>
-                      <li><a href="guide.html">Наша команда</a></li>
+                      <li><a href="{% url 'teams'%}">Наша команда</a></li>
                       <li><a href="{% url 'blog'%}">Блог</a></li>
                    </ul>
                 </div>

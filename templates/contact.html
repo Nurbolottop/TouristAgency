@@ -40,10 +40,25 @@
 
                            <h6>Посетите нас.</h6>
                            <ul class="footer-social-links justify-content-lg-start justify-content-center">
+                              {%if contact.instagram_site%}
+
                               <li><a href="{{contact.instagram_site}}"><i class="bx bxl-instagram"></i></a>Instagram</li>
+                              {%endif%}
+
+                              {%if contact.facebook_site%}
+
                               <li><a href="{{contact.facebook_site}}"><i class="bx bxl-facebook"></i></a>Facebook</li>
+                              {%endif%}
+
+                              {%if contact.youtube_site%}
+
                               <li><a href="{{contact.youtube_site}}"><i class="bx bxl-youtube"></i></a>Youtube</li>
+                              {%endif%}
+
+                              {%if contact.whatsapp_site%}
+
                               <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp"></i></a>Whatsapp</li>
+                              {%endif%}
                            </ul>
                         </div>
                         </li>

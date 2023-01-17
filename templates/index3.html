@@ -92,9 +92,18 @@
          <div class="hero-main-wrapper position-relative">
             <div class="hero-social">
                <ul class="social-list d-flex justify-content-center align-items-center gap-4">
-                  <li><a href="#">Facebook</a></li>
-                  <li><a href="#">instagram</a></li>
-                  <li><a href="#">Linked in</a></li>
+                  {%if contact.facebook_site%}
+                  <li><a href="{{contact.facebook_site}}">Facebook</a></li>
+                  {%endif%}
+
+                  {%if contact.instagram_site%}
+                  <li><a href="{{contact.instagram_site}}">instagram</a></li>
+                  {%endif%}
+
+                  {%if contact.whatsapp_site%}
+                  <li><a href="{{contact.whatsapp_site}}">Whatsapp</a></li>
+                  {%endif%}
+
                </ul>
             </div>
             <div class="swiper hero-slider-three ">
@@ -405,9 +414,8 @@
             <div class="row d-flex justify-content-center align-items-center">
                <div class="col-lg-5 d-flex justify-content-lg-start justify-content-center">
                   <div class="section-head-alpha text-lg-start text-center">
-                     <h2 class="text-white">Upcoming Best Tours</h2>
-                     <p class="text-white">Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</p>
-                  </div>
+                     <h2 class="text-white">Предстоящие лучшие туры</h2>
+                     </div>
                </div>
                <div class="col-lg-7 d-flex justify-content-lg-end justify-content-center">
                   <div class="slider-arrows text-center d-lg-flex flex-row justify-content-center d-none gap-5">
@@ -420,513 +428,52 @@
                <div class="col-lg-12">
                   <div class="swiper upcoming-tour">
                      <div class="swiper-wrapper">
+                     {%for tour in tour%}
+
                         <div class="swiper-slide">
                            <div class="package-card-beta">
                               <div class="package-thumb">
-                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s1.png' %}" alt=""></a>
+                                 <a href="{%url 'tour_detail' tour.id%}"><img src="{{tour.image_tour.url}}" alt=""></a>
                                  <p class="card-lavel">
-                                    <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
+                                    <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
                                  </p>
                               </div>
+                              
                               <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                    Pellentesque.</a>
+                                 <h3 class="p-card-title"><a href="{%url 'tour_detail' tour.id%}">{{tour.name_tour}}</a>
                                  </h3>
                                  <div class="p-card-bottom">
                                     <div class="book-btn">
-                                       <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
+                                       <a href="{%url 'tour_detail' tour.id%}">Посмотреть<i class='bx bxs-right-arrow-alt'></i></a>
                                     </div>
                                     <div class="p-card-info">
-                                       <span>From</span>
-                                       <h6>$79.00 <span>Per Person</span></h6>
+                                       <span>Для</span>
+                                       <h6><span>Одного человека</span>{{tour.price_tour}}</h6>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="swiper-slide">
-                           <div class="package-card-beta">
-                              <div class="package-thumb">
-                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s2.png' %}" alt=""></a>
-                                 <p class="card-lavel">
-                                    <i class="bi bi-clock"></i> <span>5 Day & 6 night</span>
-                                 </p>
-                              </div>
-                              <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="package-details.html">varius condimentum consequat frin
-                                    Aenean.</a>
-                                 </h3>
-                                 <div class="p-card-bottom">
-                                    <div class="book-btn">
-                                       <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                    </div>
-                                    <div class="p-card-info">
-                                       <span>From</span>
-                                       <h6>$67.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="package-card-beta">
-                              <div class="package-thumb">
-                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s3.png' %}" alt=""></a>
-                                 <p class="card-lavel">
-                                    <i class="bi bi-clock"></i> <span>4 Day & 3 night</span>
-                                 </p>
-                              </div>
-                              <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="package-details.html">Praesent sed elit mi. In risus
-                                    nullaam ultricies sapien.</a>
-                                 </h3>
-                                 <div class="p-card-bottom">
-                                    <div class="book-btn">
-                                       <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                    </div>
-                                    <div class="p-card-info">
-                                       <span>From</span>
-                                       <h6>$88.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="package-card-beta">
-                              <div class="package-thumb">
-                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s4.png' %}" alt=""></a>
-                                 <p class="card-lavel">
-                                    <i class="bi bi-clock"></i> <span>5 Day & 6 night</span>
-                                 </p>
-                              </div>
-                              <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="package-details.html">Sed ultricies sapien arcu, sed cong
-                                    feugiat sapien dignissim. </a>
-                                 </h3>
-                                 <div class="p-card-bottom">
-                                    <div class="book-btn">
-                                       <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                    </div>
-                                    <div class="p-card-info">
-                                       <span>From</span>
-                                       <h6>$91.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="package-card-beta">
-                              <div class="package-thumb">
-                                 <a href="package-details.html"><img src="{% static 'assets/images/package/best-s5.png' %}" alt=""></a>
-                                 <p class="card-lavel">
-                                    <i class="bi bi-clock"></i> <span>4 Day & 3 night</span>
-                                 </p>
-                              </div>
-                              <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="package-details.html">Pellentesque habitant morbi malesua
-                                    tristique senectus.</a>
-                                 </h3>
-                                 <div class="p-card-bottom">
-                                    <div class="book-btn">
-                                       <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                    </div>
-                                    <div class="p-card-info">
-                                       <span>From</span>
-                                       <h6>$67.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                     {%endfor%}
+                        
                      </div>
                   </div>
                </div>
             </div>
             <div class="row text-center d-flex justify-content-center">
                <div class="col-md-4">
-                  <a href="destination.html" class="button-outlined-primary upcoming-btn mt-50">View All Offer</a>
+                  <a href="{%url 'tour'%}" class="button-outlined-primary upcoming-btn mt-50">Посмотреть все</a>
                </div>
             </div>
          </div>
       </div>
-      <div class="package-area offer-package-style-one pt-110 pb-110">
-         <div class="container">
-            <div class="row d-flex justify-content-center align-items-center">
-               <div class="col-lg-6 col-sm-10">
-                  <div class="section-head-alpha">
-                     <h2>Last Minute Offers</h2>
-                     <p>Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</p>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-sm-10">
-                  <div class="package-btn text-lg-end">
-                     <a href="{%url 'tour'%}" class="button-fill-primary all-package-btn">View All Tour</a>
-                  </div>
-               </div>
-            </div>
-            <div class="row align-items-center">
-               <div class="offer-switch-button2">
-                  <ul class="nav nav-pills mb-3 justify-content-center gap-sm-4 gap-3" id="pills-tab" role="tablist">
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-offer1" data-bs-toggle="pill" data-bs-target="#pills-offer-tab1" type="button" role="tab" aria-controls="pills-offer-tab1" aria-selected="true">10%</button>
-                     </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-offer2" data-bs-toggle="pill" data-bs-target="#pills-offer-tab2" type="button" role="tab" aria-controls="pills-offer-tab2" aria-selected="false">30%</button>
-                     </li>
-                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-offer3" data-bs-toggle="pill" data-bs-target="#pills-offer-tab3" type="button" role="tab" aria-controls="pills-offer-tab3" aria-selected="false">20%</button>
-                     </li>
-                  </ul>
-               </div>
-               <div class="offer-single-tabs">
-                  <div class="tab-content" id="pills-tabContent">
-                     <div class="tab-pane fade show active" id="pills-offer-tab1" role="tabpanel" aria-labelledby="pills-offer1">
-                        <div class="row d-flex justify-content-center g-4">
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer1.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer2.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer3.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer4.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer5.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="package-page-btn text-center mt-60">
-                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
-                        </div>
-                     </div>
-                     <div class="tab-pane fade" id="pills-offer-tab2" role="tabpanel" aria-labelledby="pills-offer2">
-                        <div class="row d-flex justify-content-center g-4">
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer1.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer2.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="package-page-btn text-center mt-60">
-                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
-                        </div>
-                     </div>
-                     <div class="tab-pane fade" id="pills-offer-tab3" role="tabpanel" aria-labelledby="pills-offer3">
-                        <div class="row d-flex justify-content-center g-4">
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer5.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer6.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer3.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-md-6 fadeffect">
-                              <div class="package-card-beta">
-                                 <div class="package-thumb">
-                                    <a href="package-details.html"><img src="{% static 'assets/images/destination/lastoffer4.png' %}" alt=""></a>
-                                    <p class="card-lavel">
-                                       <i class="bi bi-clock"></i> <span>3 Day & 2 night</span>
-                                    </p>
-                                 </div>
-                                 <div class="package-card-body">
-                                    <h3 class="p-card-title"><a href="package-details.html">Etiam placerat dictum consequat an
-                                       Pellentesque habitant morbi.</a>
-                                    </h3>
-                                    <div class="p-card-bottom">
-                                       <div class="book-btn">
-                                          <a href="package-details.html">Book Now <i class='bx bxs-right-arrow-alt'></i></a>
-                                       </div>
-                                       <div class="p-card-info">
-                                          <span>From</span>
-                                          <h6>$79.00 <span>Per Person</span></h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="package-page-btn text-center mt-60">
-                           <a href="{%url 'tour'%}" class="button-fill-round">View All Offer</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      
       <div class="testimonial-area testimonial-style-three pt-110 pb-110">
          <div class="container-fluid">
             <div class="row d-flex justify-content-center align-items-center">
                <div class="col-lg-5 col-sm-10">
                   <div class="section-head-alpha text-lg-start text-center">
-                     <h2 class="text-white">Travelers Review</h2>
-                     <p class="text-white">Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</p>
+                     <h2 class="text-white">Отзывы путешественников</h2>
                   </div>
                </div>
                <div class="col-lg-6 col-sm-10 d-flex justify-content-end">
@@ -1064,9 +611,16 @@
                            </div>
                         </div>
                      </div>
+                     
                   </div>
                </div>
             </div>
+            <div class="row text-center d-flex justify-content-center">
+               <div class="col-md-4">
+                  <a href="destination.html" class="button-outlined-primary upcoming-btn mt-50">View All Offer</a>
+               </div>
+            </div>
+            
          </div>
       </div>
       <div class="guide-area guide-style-one pt-110">
@@ -1074,75 +628,44 @@
             <div class="row justify-content-center">
                <div class="col-lg-6 col-sm-10">
                   <div class="section-head-alpha text-center mx-auto">
-                     <h2>Tour Guide</h2>
-                     <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum.</p>
+                     <h2>Наша команда</h2>
                   </div>
                </div>
             </div>
             <div class="row d-flex justify-content-center g-4">
+               {%for team in team%}
                <div class="col-lg-4 col-md-6 col-md-10">
                   <div class="guide-card-beta">
                      <div class="guide-image">
-                        <img src="{% static 'assets/images/guide/guide31.png' %}" alt="">
+                        <img src="{{team.team_image.url}}" alt="">
                         <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
-                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                           <li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
+                           {%if team.team_instagram%}
+
+                           <li><a href="{{team.team_instagram}}"><i class='bx bxl-instagram'></i></a></li>
+                           {%endif%}
+                           
+                           {%if team.team_facebook%}
+                           
+                           <li><a href="[{team.team_facebook}]"><i class='bx bxl-facebook'></i></a></li>
+                           {%endif%}
+                           
+                           {%if team.team_whatsapp%}
+
+                           <li><a href="{{team.team_whatsapp}}"><i class='bx bxl-whatsapp'></i></a></li>
+                           {%endif%}
+
                         </ul>
                      </div>
                      <div class="guide-content">
                         <a href="guide.html">
-                           <h4 class="guide-name">Sebastian
-                              Mateo
+                           <h4 class="guide-name">{{team.team_name}}
                            </h4>
                         </a>
-                        <h6 class="guide-designation">Tour Guide</h6>
+                        <h6 class="guide-designation">{{team.team_work}}</h6>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-md-6 col-md-10">
-                  <div class="guide-card-beta">
-                     <div class="guide-image">
-                        <img src="{% static 'assets/images/guide/guide32.png' %}" alt="">
-                        <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
-                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                           <li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
-                        </ul>
-                     </div>
-                     <div class="guide-content">
-                        <a href="guide.html">
-                           <h4 class="guide-name">Theodore
-                              Aiden
-                           </h4>
-                        </a>
-                        <h6 class="guide-designation">Tour Guide</h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-md-10">
-                  <div class="guide-card-beta">
-                     <div class="guide-image">
-                        <img src="{% static 'assets/images/guide/guide33.png' %}" alt="">
-                        <ul class="guide-social-links d-flex justify-content-center flex-column gap-3">
-                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                           <li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
-                        </ul>
-                     </div>
-                     <div class="guide-content">
-                        <a href="guide.html">
-                           <h4 class="guide-name">Lincoln
-                              Anthony
-                           </h4>
-                        </a>
-                        <h6 class="guide-designation">Tour Guide</h6>
-                     </div>
-                  </div>
-               </div>
+               {%endfor%}
             </div>
          </div>
       </div>
@@ -1191,12 +714,10 @@
             <div class="row d-flex justify-content-center align-items-center gy-5">
                <div class="col-lg-6 text-lg-start text-center">
                   <div class="more-update-content">
-                     <h2>Join Us for More Update</h2>
-                     <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum.</p>
+                     <h2>ПРИСОЕДИНЯЙТЕСЬ К НАМ ДЛЯ БОЛЬШЕГО ОБНОВЛЕНИЯ</h2>
                   </div>
                </div>
                <div class="col-lg-3 text-lg-end text-center">
-                  <button class="button-fill-primary update-btn">Join Now</button>
                </div>
             </div>
          </div>
