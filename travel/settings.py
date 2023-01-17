@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'apps.tours',
     'apps.contacts',
     'apps.blog',
+    'apps.team',
+    
     
     
     

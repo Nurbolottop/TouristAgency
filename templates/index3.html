@@ -1151,80 +1151,38 @@
             <div class="row d-flex justify-content-center align-items-center">
                <div class="col-lg-6 col-sm-10">
                   <div class="section-head-alpha">
-                     <h2>Recent Post</h2>
-                     <p>Duis rutrum nisl urna maecenas vel libero faucibus nisi vene natis hendrerit aid lectus suspendissendt.</p>
+                     <h2>Недавний пост</h2>
                   </div>
                </div>
                <div class="col-lg-6 col-sm-10">
                   <div class="package-btn text-lg-end">
-                     <a href="blog-sidebar.html" class="button-fill-primary all-package-btn">View All Post</a>
+                     <a href="{%url 'index'%}" class="button-fill-primary all-package-btn">Посмотреть все</a>
                   </div>
                </div>
             </div>
             <div class="row">
+               {%for blog in blog%}
                <div class="col-lg-4 col-md-6">
                   <div class="blog-card-beta">
                      <div class="blog-thumb">
-                        <a href="blog-details.html">
-                        <img src="{% static 'assets/images/blog/home3-blog1.png' %}" alt="">
+                        <a href="{% url 'blog_detail' blog.id%}">
+                        <img src="{{blog.blog_image.url}}" alt="">
                         </a>
                         <div class="blog-lavel">
-                           <a href="#">Novembar 16, 2021</a>
+                           <a >{{blog.blog_type}}</a>
                         </div>
                      </div>
                      <div class="blog-content">
                         <div class="blog-body-top">
-                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
+                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> {{settings.name_site}} </a>
+                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> {{blog.blog_time}}</a>
                         </div>
-                        <h4 class="blog-title"><a href="blog-details.html">vitae tempor convallis, mi ligula an
-                           suscipit nunc, ornare suscipit.</a>
+                        <h4 class="blog-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.blog_name}}</a>
                         </h4>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-md-6">
-                  <div class="blog-card-beta">
-                     <div class="blog-thumb">
-                        <a href="blog-details.html">
-                        <img src="{% static 'assets/images/blog/home3-blog2.png' %}" alt="">
-                        </a>
-                        <div class="blog-lavel">
-                           <a href="#">Novembar 16, 2021</a>
-                        </div>
-                     </div>
-                     <div class="blog-content">
-                        <div class="blog-body-top">
-                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
-                        </div>
-                        <h4 class="blog-title"><a href="blog-details.html">Mauris commodo massa vel diamnat
-                           feugiat sagittis Nunc maxim.</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6">
-                  <div class="blog-card-beta">
-                     <div class="blog-thumb">
-                        <a href="blog-details.html">
-                        <img src="{% static 'assets/images/blog/home3-blog3.png' %}" alt="">
-                        </a>
-                        <div class="blog-lavel">
-                           <a href="#">Novembar 16, 2021</a>
-                        </div>
-                     </div>
-                     <div class="blog-content">
-                        <div class="blog-body-top">
-                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
-                        </div>
-                        <h4 class="blog-title"><a href="blog-details.html">Nulla urna leo, volutpat eu maurisa eget
-                           luctus malesuada urna.</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
+               {%endfor%}
             </div>
          </div>
       </div>

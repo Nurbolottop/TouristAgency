@@ -22,7 +22,7 @@ from apps.settings.views import index
 from apps.tours.views import tour,tour_detail
 from apps.contacts.views import contacts
 from apps.blog.views import blog_detail,blog
-
+from apps.team.views import teams
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +32,10 @@ urlpatterns = [
     path('contacts/', contacts, name="contacts"),
     path('blog/', blog, name="blog"),
     path('blog_detail/<int:id>/', blog_detail, name="blog_detail"),
+    path('blog/', blog, name="blog"),
+    path('teams/', teams, name="teams"),
+    
+    
     
     
 ]
