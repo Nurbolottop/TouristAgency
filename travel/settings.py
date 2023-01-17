@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'apps.settings',
     'apps.tours',
     'apps.contacts',
+    'apps.blog',
+    
     
     
 ]
