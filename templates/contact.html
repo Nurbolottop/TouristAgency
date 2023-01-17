@@ -6,10 +6,10 @@
       <div class="breadcrumb breadcrumb-style-one">
          <div class="container">
             <div class="col-lg-12 text-center">
-               <h2 class="breadcrumb-title">Contact Us</h2>
+               <h2 class="breadcrumb-title">Наши контакты</h2>
                <ul class="d-flex justify-content-center breadcrumb-items">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active">Contact Us</li>
+                  <li class="breadcrumb-item"><a href="{% url 'index'%}">Домой</a></li>
+                  <li class="breadcrumb-item active">Наши контакты</li>
                </ul>
             </div>
          </div>
@@ -19,27 +19,33 @@
             <div class="row align-items-center justify-content-lg-center gy-5">
                <div class="col-lg-6">
                   <div class="contatc-intro-figure">
-                     <img src="assets/images/banner/contact-bg.png" alt="" class="img-fluid">
+                     <img src="{{contact.image_contact_site.url}}" width = "600px"alt="" class="img-fluid">
                   </div>
                </div>
                <div class="col-lg-5">
                   <div class="contact-info">
-                     <h3>Contact Info.</h3>
+                     <h3>Контактная информация.</h3>
                      <ul>
                         <li>
-                           <h6>Let’s Talk</h6>
-                           <a href="/cdn-cgi/l/email-protection#e68f888089a6839e878b968a83c885898b"><span class="__cf_email__" data-cfemail="adc4c3cbc2edc8d5ccc0ddc1c883cec2c0">[email&#160;protected]</span></a>
-                           <a href="/cdn-cgi/l/email-protection#1b72757d745b7e637a766b777e35787476"><span class="__cf_email__" data-cfemail="98f1f6fef7d8fde0f9f5e8f4fdb6fbf7f5">[email&#160;protected]</span></a>
-                           <a href="tel:8801761111456">+88 0176 1111 456</a>
+                           <h6>Давай поговорим</h6>
+                           <a ><span class="__cf_email__" data-cfemail="adc4c3cbc2edc8d5ccc0ddc1c883cec2c0">{{contact.email_site}}</span></a>
+                           <a >{{contact.phone_site}}</a>
                         </li>
                         <li>
-                           <h6>Loacation.</h6>
-                           <a href="#">168/170, Ave 01, Streets Suite 666 Mirpur DOHS, Bangladesh</a>
+                           <h6>Местоположение.</h6>
+                           <a >{{contact.address_site}}</a>
                         </li>
                         <li>
-                           <h6>Visit Us.</h6>
-                           <a href="#">Facebook: https://www.facebook.com/egenslab</a>
-                           <a href="#">Twitter: https://www.twitter.com/egenslab</a>
+                        <div class="footer-social-wrap">
+
+                           <h6>Посетите нас.</h6>
+                           <ul class="footer-social-links justify-content-lg-start justify-content-center">
+                              <li><a href="{{contact.instagram_site}}"><i class="bx bxl-instagram"></i></a>Instagram</li>
+                              <li><a href="{{contact.facebook_site}}"><i class="bx bxl-facebook"></i></a>Facebook</li>
+                              <li><a href="{{contact.youtube_site}}"><i class="bx bxl-youtube"></i></a>Youtube</li>
+                              <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp"></i></a>Whatsapp</li>
+                           </ul>
+                        </div>
                         </li>
                      </ul>
                   </div>
@@ -50,7 +56,7 @@
             <div class="contact-map mt-120">
                <div class="mapouter">
                   <div class="gmap_canvas">
-                     <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://123movies-to.org"></a><br>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6066.024393504179!2d72.80299940000002!3d40.519221500000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdac204cbe2447%3A0x3ab10b44eab46f1e!2z0J7RiNGB0LrQuNC5INCU0YDQsNC80LDRgtC40YfQtdGB0LrQuNC5INCi0LXQsNGC0YAsINCb0LXQvdC40L0g0J_RgNC-0YHQv9C10LrRgiwg0J7RiA!5e0!3m2!1sru!2skg!4v1673937505631!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                </div>
             </div>
@@ -86,112 +92,5 @@
             </form>
          </div>
       </div>
-      <div class="footer-area mt-110">
-         <div class="footer-main-wrapper">
-            <div class="footer-vactor">
-               <img src="assets/images/banner/footer-bg.png" alt="">
-            </div>
-            <div class="container">
-               <div class="row justify-content-center g-4">
-                  <div class="col-lg-4">
-                     <div class="footer-about text-lg-start text-center">
-                        <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt molestie turpis nec lacinia vehicula.</p>
-                        <div class="footer-social-wrap">
-                           <h5>Follow Us On:</h5>
-                           <ul class="footer-social-links justify-content-lg-start justify-content-center">
-                              <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
-                              <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
-                              <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
-                              <li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
-                              <li><a href="#"><i class='bx bxl-pinterest-alt'></i></a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="footer-widget">
-                        <h4 class="footer-widget-title">Quick Link</h4>
-                        <ul class="footer-links">
-                           <li><a href="about.html">About Us</a></li>
-                           <li><a href="package.html">Tour Package</a></li>
-                           <li><a href="destination.html">Destination</a></li>
-                           <li><a href="guide.html">Tour Guide</a></li>
-                           <li><a href="package-details.html">Booking Process</a></li>
-                           <li><a href="blog.html">Blog</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-2 col-md-4">
-                     <div class="footer-widget">
-                        <h4 class="footer-widget-title">Tour Type</h4>
-                        <ul class="footer-links">
-                           <li><a href="#">Wild & Adventure Tours</a></li>
-                           <li><a href="#">Group Tour</a></li>
-                           <li><a href="#">Seasonal Tours</a></li>
-                           <li><a href="#">Relaxation Tours</a></li>
-                           <li><a href="#">Family Friendly Tours</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-8">
-                     <div class="footer-widget">
-                        <h4 class="footer-widget-title text-center">Gallery</h4>
-                        <div class="footer-gallary-grid">
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-1.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-1.png" alt=""></a>
-                           </div>
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-2.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-2.png" alt=""></a>
-                           </div>
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-3.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-3.png" alt=""></a>
-                           </div>
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-4.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-4.png" alt=""></a>
-                           </div>
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-5.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-5.png" alt=""></a>
-                           </div>
-                           <div class="footer-gallary-item">
-                              <a href="assets/images/gallary/fg-6.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-6.png" alt=""></a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="footer-contact-wrapper">
-                  <h5>Contact Us:</h5>
-                  <ul class="footer-contact-list">
-                     <li><i class="bi bi-telephone-x"></i> <a href="tel:+17632275032">+1 763-227-5032</a></li>
-                     <li><i class="bi bi-envelope-open"></i> <a href="/cdn-cgi/l/email-protection#f69f989099b6829983848e868499d895999b"><span class="__cf_email__" data-cfemail="c9a0a7afa689bda6bcbbb1b9bba6e7aaa6a4">[email&#160;protected]</span></a></li>
-                     <li><i class="bi bi-geo-alt"></i> <a href="#">2752 Willison Street Eagan, United State</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <div class="footer-bottom">
-            <div class="container">
-               <div class="row align-items-center justify-content-center">
-                  <div class="col-lg-4 col-md-6 order-lg-1 order-3 ">
-                     <div class="copyright-link text-lg-start text-center">
-                        <p>Copyright 2021 TourXPro | Design By <a href="#"> Egens Lab</a></p>
-                     </div>
-                  </div>
-                  <div class="col-lg-4  order-lg-2 order-1">
-                     <div class="footer-logo text-center">
-                        <a href="index.html"><img src="assets/images/logo-w.png" alt=""></a>
-                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 order-lg-3 order-2">
-                     <div class="policy-links">
-                        <ul class="policy-list justify-content-lg-end justify-content-center">
-                           <li><a href="#">Terms & Condition</a></li>
-                           <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      {% include 'footer.html'%}
 {%endblock%}

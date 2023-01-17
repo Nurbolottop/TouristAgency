@@ -6,7 +6,7 @@ class Contacts(models.Model):
     email_site =models.EmailField(verbose_name="Почта")
     phone_site = models.CharField(max_length=255,verbose_name="Тел.ном")
     address_site = models.CharField(max_length=255,verbose_name="Адрес")
-    maps_site = models.TextField(verbose_name="Адрес на карте")
+    maps_site = models.URLField(verbose_name="Адрес на карте")
     instagram_site = models.URLField(verbose_name="Instagram",blank=True, null=True)
     facebook_site = models.URLField(verbose_name="Fcebook",blank=True, null=True)
     youtube_site = models.URLField(verbose_name="Youtube",blank=True, null=True)
