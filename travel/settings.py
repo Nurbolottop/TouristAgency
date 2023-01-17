@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'apps.contacts',
     'apps.blog',
     'apps.team',
+    'apps.tickets',
+    
     
     
     

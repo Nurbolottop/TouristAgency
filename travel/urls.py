@@ -23,6 +23,7 @@ from apps.tours.views import tour,tour_detail
 from apps.contacts.views import contacts
 from apps.blog.views import blog_detail,blog
 from apps.team.views import teams
+from apps.tickets.views import tickets,tickets_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,7 +35,8 @@ urlpatterns = [
     path('blog_detail/<int:id>/', blog_detail, name="blog_detail"),
     path('blog/', blog, name="blog"),
     path('teams/', teams, name="teams"),
-    
+    path('tickets/', tickets, name="tickets"),
+    path('tickets_detail/<int:id>/', tickets_detail, name="tickets_detail"),
     
     
     
