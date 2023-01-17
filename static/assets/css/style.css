@@ -910,7 +910,7 @@ table tbody tr td,table tbody tr th,table thead tr td,table thead tr th,table tf
 .topbar-style-one{
     background:#2d373c;
     position:relative;
-    z-index:1
+    z-index:3
 }
 .topbar-style-one .topbar-contact-left .contact-list{
     display:flex
@@ -918,7 +918,7 @@ table tbody tr td,table tbody tr th,table thead tr td,table thead tr th,table tf
 .topbar-style-one .topbar-contact-left .contact-list li{
     margin-right:20px;
     font-weight:600;
-    font-size:13px;
+    font-size:14    px;
     color:#fff
 }
 .topbar-style-one .topbar-contact-left .contact-list li a{
@@ -937,7 +937,7 @@ table tbody tr td,table tbody tr th,table thead tr td,table thead tr th,table tf
     line-height:20px;
     color:#fff;
     background:#ff4838;
-    padding:13px 50px
+    padding:10px 50px
 }
 .topbar-style-one .topbar-social-links{
     display:flex
