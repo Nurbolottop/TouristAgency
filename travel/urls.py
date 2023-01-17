@@ -20,12 +20,16 @@ from django.conf import settings
 
 from apps.settings.views import index
 from apps.tours.views import tour,tour_detail
+from apps.contacts.views import contacts
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('tours/', tour, name="tour"),
     path('tours_detail/<int:id>/', tour_detail, name="tour_detail"),
+    path('contacts/', contacts, name="contacts"),
+    
     
 ]
 urlpatterns +=static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     #apps
     'apps.settings',
     'apps.tours',
+    'apps.contacts',
+    
     
 ]
 

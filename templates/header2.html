@@ -1,0 +1,80 @@
+{%load static%}
+<header>
+    <div class="header-area header-style-one">
+       <div class="container">
+          <div class="row">
+             <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
+                <div class="nav-logo d-flex justify-content-between align-items-center">
+                   <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                   <div class="d-flex align-items-center gap-4">
+                      <div class="nav-right d-xl-none">
+                         <ul class="nav-actions">
+                            <li class="category-toggle">
+                               <i class='bx bx-category'></i>
+                            </li>
+                            <li class="search-toggle">
+                               <i class='bx bx-search-alt'></i>
+                            </li>
+                         </ul>
+                      </div>
+                      <div class="mobile-menu d-flex ">
+                         <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
+                         <span class="h-top"></span>
+                         <span class="h-middle"></span>
+                         <span class="h-bottom"></span>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                <nav class="main-nav float-end">
+                   <div class="inner-logo d-xl-none text-center">
+                      <a href="#"><img src="assets/images/logo.png" alt=""></a>
+                   </div>
+                   <ul>
+                     <li >
+                        <a href="{% url 'index'%}">Домой</a>
+                        
+                    </li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="destination.html">Ж/Д билеты</a></li>
+                    <li>
+                        <a href="{% url 'tour'%}">Заказат тур </a>
+                    </li>
+                      <li >
+                         <a href="blog.html">Новости</a>
+                      </li>
+                      <li class="has-child-menu">
+                         <a href="javascript:void(0)">Страницы</a>
+                         <i class="fl flaticon-plus">+</i>
+                         <ul class="sub-menu">
+                            <li><a href="guide.html">Наша команда</a></li>
+                            <li><a href="gallary.html">Галлерея</a></li>
+                            <li><a href="faq.html">Часто задаваемые вопросы</a></li>
+                         </ul>
+                      </li>
+                      <li><a href="contact.html">Наши контакты</a></li>
+                   </ul>
+                   <div class="inner-contact-options d-xl-none">
+                      <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></div>
+                      <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#89e0e7efe6c9ecf1e8e4f9e5eca7eae6e4"><span class="__cf_email__" data-cfemail="c3aaada5ac83a6bba2aeb3afa6eda0acae">[email&#160;protected]</span></a></div>
+                   </div>
+                </nav>
+             </div>
+             <div class="col-xl-2">
+                <div class="nav-right float-end d-xl-flex d-none ">
+                   <ul class="nav-actions">
+                      <li class="category-toggle">
+                         <i class='bx bx-category'></i>
+                      </li>
+                      <li class="search-toggle">
+                         <i class='bx bx-search-alt'></i>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </header>
