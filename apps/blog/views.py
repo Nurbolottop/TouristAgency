@@ -16,10 +16,10 @@ def blog(request):
     }
     return render(request, 'blog.html', context)
 
-def blog_detail(request):
+def blog_detail(request,id):
     settings = Settings.objects.latest('id')
     contact = Contacts.objects.latest('id')
-    blog = Blog.objects.all()
+    blog = Blog.objects.get(id = id)
     
     context = {
         'settings':settings,
