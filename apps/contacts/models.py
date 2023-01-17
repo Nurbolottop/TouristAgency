@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Contacts(models.Model):
-    email_site =models.CharField(max_length=255,verbose_name="Почта")
+    image_contact_site = models.ImageField(upload_to="contact",verbose_name="Фотография для страницы Контакты")
+    email_site =models.EmailField(verbose_name="Почта")
     phone_site = models.CharField(max_length=255,verbose_name="Тел.ном")
     address_site = models.CharField(max_length=255,verbose_name="Адрес")
     maps_site = models.TextField(verbose_name="Адрес на карте")
