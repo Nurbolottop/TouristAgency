@@ -15,3 +15,15 @@ def blog(request):
         'blog':blog,
     }
     return render(request, 'blog.html', context)
+
+def blog_detail(request):
+    settings = Settings.objects.latest('id')
+    contact = Contacts.objects.latest('id')
+    blog = Blog.objects.all()
+    
+    context = {
+        'settings':settings,
+        'contact':contact,
+        'blog':blog,
+    }
+    return render(request, 'blog-details.html', context)

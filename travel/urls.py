@@ -21,6 +21,7 @@ from django.conf import settings
 from apps.settings.views import index
 from apps.tours.views import tour,tour_detail
 from apps.contacts.views import contacts
+from apps.blog.views import blog_detail,blog
 
 
 urlpatterns = [
@@ -29,6 +30,8 @@ urlpatterns = [
     path('tours/', tour, name="tour"),
     path('tours_detail/<int:id>/', tour_detail, name="tour_detail"),
     path('contacts/', contacts, name="contacts"),
+    path('blog/', blog, name="blog"),
+    path('blog_detail/<int:id>/', blog_detail, name="blog_detail"),
     
     
 ]
