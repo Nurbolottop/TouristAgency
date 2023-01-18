@@ -1,0 +1,45 @@
+{% extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+
+      {%include 'header2.html'%}
+
+         <div class="container mt-120">
+            <form method = "POST">
+               {% csrf_token %}
+               <div class="contact-form-wrap">
+                  <h4>Оставьте отзыв.</h4>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="custom-input-group">
+                           <label for="name">Имя</label>
+                           <input type="text" placeholder="Your name" name="name_user">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="custom-input-group">
+                           <label for="email">Почта</label>
+                           <input type="text" placeholder="Your Email" name="email_user">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="custom-input-group">
+                           <label for="email">Почта</label>
+                           <input type="file" placeholder="Your Email" name="image_user">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="custom-input-group">
+                     <textarea cols="20" rows="7" name = "message" placeholder="Your message"></textarea>
+                  </div>
+                  <div class="custom-input-group">
+                     <div class="submite-btn">
+                        <button type="submit">Send Message</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      {% include 'footer.html'%}
+{%endblock%}

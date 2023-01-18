@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Tickets(models.Model):
     image_ticket = models.ImageField(upload_to="tickets", verbose_name="Фотография")
+    price_ticket = models.CharField(max_length=255,verbose_name="Цена")
     name_ticket = models.CharField(max_length=255,verbose_name="Название")
     description_ticket = models.TextField(verbose_name="Описание")
     first_image = models.ImageField(upload_to="tickets",verbose_name="Первая дополнительная фотография")

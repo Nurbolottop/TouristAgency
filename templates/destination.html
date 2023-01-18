@@ -18,18 +18,21 @@
          <div class="container">
             <div class="row g-3">
                 {%for ticket in tickets%}
-               <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div class="destination-card-style-two">
-                     <div class="d-card-thumb">
-                        <img src="{{ticket.image_ticket.url}}" alt="">
-                     </div>
-                     <div class="d-card-content">
-                        <h4 class="destination-title"><a href="destination-details.html">{{ticket.name_ticket}}</a></h4>
-                        <div class="place-count">
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="destination-card-style-two">
+                        <div class="d-card-thumb">
+                           <img src="{{ticket.image_ticket.url}}" alt="">
+                        </div>
+                        <div class="d-card-content">
+                           <h4 class="destination-title"><a href="{% url 'tickets_detail' ticket.id%}">{{ticket.name_ticket}}</a></h4>
+                           <div class="place-count">
+                              <a href="{% url 'tickets_detail' ticket.id%}">
+                                 <h6>{{ticket.price_ticket}}</h6>
+                              </a>
+                           </div>
                         </div>
                      </div>
                   </div>
-               </div>
                {%endfor%}
                
             </div>

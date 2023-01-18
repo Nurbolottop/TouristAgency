@@ -303,108 +303,25 @@
                </div>
             </div>
             <div class="row d-flex justify-content-center g-4">
-               <div class="col-lg-6 col-md-12 col-sm-10 fadeffect">
-                  <div class="destination-item">
-                     <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds1.png' %}" alt="">
-                     </div>
-                     <div class="destination-overlay">
-                        <div class="content">
-                           <a href="destination-details.html">
-                              <h5>Grand Switzerland</h5>
-                           </a>
-                           <a href="destination-details.html">
-                              <h6>45 Place</h6>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               {% for ticket in tickets%}
                <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
                   <div class="destination-item">
                      <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds2.png' %}" alt="">
+                        <img src="{{ticket.image_ticket.url}}" alt="">
                      </div>
                      <div class="destination-overlay">
                         <div class="content">
-                           <a href="destination-details.html">
-                              <h5>Paris</h5>
+                           <a href="{% url 'tickets_detail' ticket.id%}">
+                              <h5>{{ticket.name_ticket}}</h5>
                            </a>
-                           <a href="destination-details.html">
-                              <h6>35 Place</h6>
+                           <a href="{% url 'tickets_detail' ticket.id%}">
+                              <h6>{{ticket.price_ticket}}</h6>
                            </a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
-                  <div class="destination-item">
-                     <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds3.png' %}" alt="">
-                     </div>
-                     <div class="destination-overlay">
-                        <div class="content">
-                           <a href="destination-details.html">
-                              <h5>Augsburg</h5>
-                           </a>
-                           <a href="destination-details.html">
-                              <h6>15 Place</h6>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
-                  <div class="destination-item">
-                     <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds4.png' %}" alt="">
-                     </div>
-                     <div class="destination-overlay">
-                        <div class="content">
-                           <a href="destination-details.html">
-                              <h5>Paris</h5>
-                           </a>
-                           <a href="destination-details.html">
-                              <h6>34 Place</h6>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 col-sm-10 fadeffect">
-                  <div class="destination-item">
-                     <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds5.png' %}" alt="">
-                     </div>
-                     <div class="destination-overlay">
-                        <div class="content">
-                           <a href="destination-details.html">
-                              <h5>Wiesbaden</h5>
-                           </a>
-                           <a href="destination-details.html">
-                              <h6>10 Place</h6>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-md-12 col-sm-10 fadeffect">
-                  <div class="destination-item">
-                     <div class="destination-img">
-                        <img src="{% static 'assets/images/destination/top-ds6.png' %}" alt="">
-                     </div>
-                     <div class="destination-overlay">
-                        <div class="content">
-                           <a href="destination-details.html">
-                              <h5>UK</h5>
-                           </a>
-                           <a href="destination-details.html">
-                              <h6>67 Place</h6>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               {% endfor%} 
             </div>
          </div>
       </div>
@@ -527,88 +444,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="swiper-slide">
-                           <div class="testimonial-card-beta mx-auto">
-                              <div class="testimonial-quote-icon">
-                                 <img src="{% static 'assets/images/icons/quote-review.svg' %}" class="img-fluid" />
-                              </div>
-                              <div class="testimonial-card-body">
-                                 <div class="testimonial-info">
-                                    <div class="reviewr-info">
-                                       <div class="single-thumb">
-                                          <img src="{% static 'assets/images/reviewer/testi32.png' %}" alt="">
-                                       </div>
-                                       <div class="reviwer-info-cotn">
-                                          <h5 class="reviewer-name">Shwan Pull</h5>
-                                          <ul class="reviewer-rating gap-2">
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                          </ul>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="review-texts">
-                                    <p>
-                                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="testimonial-card-beta mx-auto">
-                              <div class="testimonial-quote-icon">
-                                 <img src="{% static 'assets/images/icons/quote-review.svg' %}" class="img-fluid" />
-                              </div>
-                              <div class="testimonial-card-body">
-                                 <div class="testimonial-info">
-                                    <div class="reviewr-info">
-                                       <div class="single-thumb">
-                                          <img src="{% static 'assets/images/reviewer/testi33.png' %}" alt="">
-                                       </div>
-                                       <div class="reviwer-info-cotn">
-                                          <h5 class="reviewer-name">Mixis Pull</h5>
-                                          <ul class="reviewer-rating gap-2">
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                          </ul>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="review-texts">
-                                    <p>
-                                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                        
                      </div>
                      
                   </div>
@@ -616,7 +452,7 @@
             </div>
             <div class="row text-center d-flex justify-content-center">
                <div class="col-md-4">
-                  <a href="destination.html" class="button-outlined-primary upcoming-btn mt-50">Посмотреть все</a>
+                  <a href="{% url 'review'%}" class="button-outlined-primary upcoming-btn mt-50">Оставить отзыв!</a>
                </div>
             </div>
             

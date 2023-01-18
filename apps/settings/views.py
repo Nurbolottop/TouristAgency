@@ -4,6 +4,8 @@ from apps.tours.models import Tours
 from apps.contacts.models import Contacts
 from apps.blog.models import Blog
 from apps.team.models import Team
+from apps.tickets.models import Tickets
+
 
 # Create your views here.
 def index(request):
@@ -13,6 +15,8 @@ def index(request):
     contact = Contacts.objects.latest('id')
     blog = Blog.objects.all()
     team = Team.objects.all()
+    tickets = Tickets.objects.all()
+    
     
     
     context = {
@@ -22,6 +26,8 @@ def index(request):
         'contact': contact,
         'blog':blog,
         'team':team,
+        'tickets':tickets,
+        
         
         
     }
