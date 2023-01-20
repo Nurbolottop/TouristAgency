@@ -3,12 +3,15 @@ from django.core.mail import send_mail
 from apps.settings.models import Settings
 from apps.contacts.models import Contacts
 from apps.faq.models import Faq,Question
+from apps.gallery.models import Gallery
 
 # Create your views here.
 def faq(request):
     settings = Settings.objects.latest('id')
     contact = Contacts.objects.latest('id')
     faq = Faq.objects.all()
+    gallery = Gallery.objects.all()
+    
     if request.method == "POST":
         name  = request.POST.get('name')
         email = request.POST.get('email')
@@ -27,6 +30,8 @@ def faq(request):
         'settings':settings,
         'contact':contact,
         'faq':faq,
+        'gallery':gallery,
+        
     }
     return render(request, 'faq.html', context)
 

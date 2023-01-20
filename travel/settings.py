@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'apps.review',
     'apps.faq',
     'apps.about',
+    'apps.gallery',
+    
     
     
     

@@ -6,6 +6,7 @@ from apps.about.models import About, AboutNumber
 from apps.blog.models import Blog
 from apps.team.models import Team
 from apps.review.models import Review
+from apps.gallery.models import Gallery
 
 # Create your views here.
 def about(request):
@@ -16,6 +17,7 @@ def about(request):
     blog = Blog.objects.all()
     team = Team.objects.all()
     review = Review.objects.all()
+    gallery = Gallery.objects.all()
     
     context = {
         'settings':settings,
@@ -25,6 +27,7 @@ def about(request):
         'blog':blog,
         'team':team,
         'review':review,
+        'gallery':gallery,
         
         
     }
