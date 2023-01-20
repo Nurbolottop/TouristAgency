@@ -24,10 +24,13 @@ def blog_detail(request,id):
     settings = Settings.objects.latest('id')
     contact = Contacts.objects.latest('id')
     blog = Blog.objects.get(id = id)
+    gallery = Gallery.objects.all()
     
     context = {
         'settings':settings,
         'contact':contact,
         'blog':blog,
+        'gallery':gallery,
+        
     }
     return render(request, 'blog-details.html', context)

@@ -6,6 +6,7 @@ from apps.blog.models import Blog
 from apps.team.models import Team
 from apps.tickets.models import Tickets
 from apps.review.models import Review
+from apps.gallery.models import Gallery
 
 # Create your views here.
 def index(request):
@@ -17,6 +18,7 @@ def index(request):
     team = Team.objects.all()
     tickets = Tickets.objects.all()
     review = Review.objects.all()
+    gallery = Gallery.objects.all()
     
     
     
@@ -29,6 +31,7 @@ def index(request):
         'team':team,
         'tickets':tickets,
         'review':review,
+        'gallery':gallery,
         
         
         
