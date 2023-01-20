@@ -403,6 +403,7 @@
                <div class="col-lg-12">
                   <div class="swiper testimonial-slider-three">
                      <div class="swiper-wrapper">
+                        {%for review in review%}
                         <div class="swiper-slide">
                            <div class="testimonial-card-beta mx-auto">
                               <div class="testimonial-quote-icon">
@@ -412,39 +413,27 @@
                                  <div class="testimonial-info">
                                     <div class="reviewr-info">
                                        <div class="single-thumb">
-                                          <img src="{% static 'assets/images/reviewer/testi31.png' %}" alt="">
+                                          <img src="{% static 'assets/images/reviewer/avater2.png' %}" alt="">
                                        </div>
                                        <div class="reviwer-info-cotn">
-                                          <h5 class="reviewer-name">Jims Pull</h5>
+                                          <h5 class="reviewer-name">{{review.name_user}}</h5>
                                           <ul class="reviewer-rating gap-2">
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
-                                             <li>
-                                                <i class="bi bi-star-fill"></i>
-                                             </li>
+                                             <p>
+                                                {{review.email_user}}
+                                             </p>
                                           </ul>
                                        </div>
                                     </div>
                                  </div>
                                  <div class="review-texts">
                                     <p>
-                                       Amazing team, effective solutions that resulted in high rated search optimization & catchy branding. Running our tourist & I am very satisfied and have been a customer.
+                                       {{review.message_user}}
                                     </p>
                                  </div>
                               </div>
                            </div>
                         </div>
-                        
+                        {% endfor %}
                      </div>
                      
                   </div>
