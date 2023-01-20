@@ -1,884 +1,421 @@
-<!doctype html>
-<html lang="en">
-<head>
-<title>TourX Pro - Travels Tourism Agency HTML Template</title>
+{% extends 'homepage.html'%}
+{%load static%}
+{%block content%}
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="20x20">
-
-<link rel="stylesheet" href="assets/css/select2.min.css">
-
-<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-
-<link href='assets/css/boxicons.min.css' rel='stylesheet'>
-
-<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="assets/css/animate.min.css">
-
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body>
-
-<div class="preloader">
-<div class="loader">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
-</div>
-
-
-<div class="main-searchbar-wrapper">
-<div class="container">
-<div class="multi-main-searchber">
-<div class="main-searchbar-close search-toggle">
-<i class="bi bi-x-lg"></i>
-</div>
-<form action="#" method="post" id="main_searchbar">
-<div class="row g-4">
-<div class="col-lg-10">
-<div class="row gx-0 gy-4">
-<div class="col-lg-3 col-md-6">
-<div class="search-box-single destination-box">
-<div class="searchbox-icon ">
-<i class="bi bi-geo-alt"></i>
-</div>
-<div class="searchbox-input">
-<label for="deatination_drop">Destination</label>
-<select data-placeholder="Where Are You Going?" id="deatination_drop">
-<option value="">Where Are You Going?</option>
-<optgroup label="India">
-<option>
-Solt Lake
-</option>
-<option>
-Kolkata
-</option>
-<option>
-Mohamia
-</option>
-<option>
-Mumbai
-</option>
-<option>
-New Delhi
-</option>
-</optgroup>
-<optgroup label=" Bangladash">
-<option>
-Cox's Bazer
-</option>
- <option>
-Rangamati
-</option>
-<option>
-Banderban
-</option>
-</optgroup>
-</select>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="search-box-single type-box">
-<div class="searchbox-icon">
-<i class="bi bi-text-paragraph"></i>
-</div>
-<div class="searchbox-input">
-<label for="activity-dropdown">Travel Type</label>
-<select class="defult-select-drowpown" data-placeholder="All Activity" id="activity-dropdown">
-<option value="">All Activity</option>
-<option value="1">Type 1</option>
-<option value="2">Type 2</option>
-<option value="3">Type 3</option>
-<option value="4">Type 4</option>
-</select>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="search-box-single type-box">
-<div class="searchbox-icon">
-<i class="bi bi-person-plus"></i>
-</div>
-<div class="searchbox-input">
-<label for="person-dropdown">Person</label>
-<select class="defult-select-drowpown" id="person-dropdown">
-<option selected value="0">01</option>
-<option value="1">02</option>
-<option value="2">03</option>
-<option value="3">04</option>
-<option value="4">05</option>
-</select>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="search-box-single date-box">
-<div class="searchbox-icon">
-<i class="bi bi-capslock"></i>
-</div>
-<div class="searchbox-input date-picker-input">
-<label for="datepicker">When</label>
-<input placeholder="Select your date" type="text" name="checkIn" id="datepicker" value="" class="calendar">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-2">
- <div class="main-form-submit">
-<button type="submit">Find Now</button>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-<div class="category-sidebar-wrapper">
-<div class="category-sidebar">
-<div class="category-header d-flex justify-content-between align-items-center">
-<h4>Category</h4>
-<div class="category-toggle">
-<i class="bi bi-x-lg"></i>
-</div>
-</div>
-<div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate1.svg" alt="">
-</div>
-<h5>Adventure</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate2.svg" alt="">
-</div>
-<h5>Group Tour</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate3.svg" alt="">
-</div>
-<h5>Couple Tour</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate4.svg" alt="">
-</div>
-<h5>Single Tour</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate5.svg" alt="">
-</div>
-<h5>Honeymoon</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate6.svg" alt="">
-</div>
-<h5>Sea Beach</h5>
-</a>
-</div>
-<div class="col">
-<a class="category-box" href="package.html">
-<div class="cate-icon mx-auto">
-<img src="assets/images/icons/cate7.svg" alt="">
-</div>
-<h5>Mountain Tour</h5>
-</a>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="topbar-area topbar-style-one">
-<div class="container">
-<div class="row">
-<div class="col-xl-4 align-items-center d-xl-flex d-none">
-<div class="topbar-contact-left">
-<ul class="contact-list">
-<li><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></li>
-<li><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#fb92959d94bb9e839a968b979ed5989496"><span class="__cf_email__" data-cfemail="f79e999198b7928f969a879b92d994989a">[email&#160;protected]</span></a></li>
-</ul>
-</div>
-</div>
- <div class="col-xl-5 col-lg-6 col-md-6 text-xl-center text-md-start text-center">
-<div class="topbar-ad">
-<a href="#">Black Friday Big Offer</a>
-</div>
-</div>
-<div class="col-xl-3 col-lg-6 col-md-6 d-md-flex  d-none align-items-center justify-content-end">
-<ul class="topbar-social-links">
-<li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-<li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
-<li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-<li><a href="#"><i class="bx bxl-whatsapp-square"></i></a></li>
-<li><a href="#"><i class='bx bxl-pinterest'></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-
-
-<header>
-<div class="header-area header-style-one">
-<div class="container">
-<div class="row">
-<div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
-<div class="nav-logo d-flex justify-content-between align-items-center">
-<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-<div class="d-flex align-items-center gap-4">
-<div class="nav-right d-xl-none">
-<ul class="nav-actions">
-<li class="category-toggle">
-<i class='bx bx-category'></i>
-</li>
-<li class="search-toggle">
-<i class='bx bx-search-alt'></i>
-</li>
-</ul>
-</div>
-<div class="mobile-menu d-flex ">
-<a href="javascript:void(0)" class="hamburger d-block d-xl-none">
-<span class="h-top"></span>
-<span class="h-middle"></span>
-<span class="h-bottom"></span>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
-<nav class="main-nav float-end">
-<div class="inner-logo d-xl-none text-center">
-<a href="#"><img src="assets/images/logo.png" alt=""></a>
-</div>
-<ul>
-<li class="has-child-menu">
-<a href="javascript:void(0)">Home</a>
-<i class="fl flaticon-plus">+</i>
-<ul class="sub-menu">
-<li><a href="index.html">Home Style 1</a></li>
-<li><a href="index2.html">Home Style 2</a></li>
-<li><a href="index3.html">Home Style 3</a></li>
-<li><a href="index4.html">Home Style 4</a></li>
-</ul>
-</li>
-<li><a href="about.html">About Us</a></li>
-<li class="has-child-menu">
-<a href="javascript:void(0)">Destination</a>
-<i class="fl flaticon-plus">+</i>
-<ul class="sub-menu">
-<li><a href="destination.html">Destination</a></li>
-<li><a href="destination-details.html">Destination Details</a></li>
-</ul>
-</li>
-<li class="has-child-menu">
-<a href="javascript:void(0)">Package</a>
-<i class="fl flaticon-plus">+</i>
-<ul class="sub-menu">
-<li><a href="package.html">Package Grid</a></li>
-<li><a href="package-sidebar.html">Package Sidebar</a></li>
-<li><a href="package-standard.html">Package Standard</a></li>
-<li><a href="package-details.html">Package Details </a></li>
-</ul>
-</li>
-<li class="has-child-menu">
-<a href="javascript:void(0)">Blogs</a>
-<i class="fl flaticon-plus">+</i>
-<ul class="sub-menu">
-<li><a href="blog.html">Blog Grid</a></li>
-<li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-<li><a href="blog-standard.html">Blog Standard </a></li>
-<li><a href="blog-details.html">Blog Details</a></li>
-</ul>
-</li>
-<li class="has-child-menu">
-<a href="javascript:void(0)">Pages</a>
-<i class="fl flaticon-plus">+</i>
-<ul class="sub-menu">
-<li><a href="guide.html">Guide</a></li>
-<li><a href="gallary.html">Gallary</a></li>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="404.html">404</a></li>
-</ul>
-</li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
-<div class="inner-contact-options d-xl-none">
-<div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></div>
-<div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#432a2d252c03263b222e332f266d202c2e"><span class="__cf_email__" data-cfemail="cfa6a1a9a08faab7aea2bfa3aae1aca0a2">[email&#160;protected]</span></a></div>
-</div>
-</nav>
-</div>
-<div class="col-xl-2">
-<div class="nav-right float-end d-xl-flex d-none ">
-<ul class="nav-actions">
-<li class="category-toggle">
-<i class='bx bx-category'></i>
-</li>
-<li class="search-toggle">
-<i class='bx bx-search-alt'></i>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
-
-
-<div class="breadcrumb breadcrumb-style-one">
- <div class="container">
-<div class="col-lg-12 text-center">
-<h2 class="breadcrumb-title">About Us</h2>
-<ul class="d-flex justify-content-center breadcrumb-items">
-<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-<li class="breadcrumb-item active">About Us</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-<div class="about-main-wrappper pt-100">
-<div class="container">
-<div class="about-tab-wrapper">
-<div class="row justify-content-center align-items-center">
-<div class="col-lg-6">
-<div class="about-tab-image-grid text-center">
-<div class="about-video d-inline-block">
-<img src="assets/images/about/about-g2.png" alt="">
-<div class="video-overlay">
-<a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-icon video-popup">
-<i class="bi bi-play-fill"></i>
-</a>
-</div>
-</div>
-<div class="row float-images g-4">
-<div class="col-lg-6 col-md-6 col-sm-6">
-<div class="about-image">
-<img src="assets/images/about/about-g1.png" alt="">
-</div>
-</div>
-<div class="col-lg-6 col-md-6 col-sm-6">
-<div class="about-image">
-<img src="assets/images/about/about-g3.png" alt="">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6 mt-5 mt-lg-0">
-<div class="about-tab-wrap">
-<h2 class="about-wrap-title">
-About Our Company And <span>What We Are</span> Offer.
-</h2>
-<div class="about-tab-switcher">
-<ul class="nav nav-pills mb-3 justify-content-md-between justify-content-center" id="about-tab-pills" role="tablist">
-<li class="nav-item" role="presentation">
-<div class="nav-link active" id="pills-about1" data-bs-toggle="pill" data-bs-target="#about-pills1" role="tab" aria-controls="about-pills1" aria-selected="true">
-<h3>10</h3>
-<h6>Years Experience</h6>
-</div>
-</li>
-<li class="nav-item" role="presentation">
-<div class="nav-link" id="pills-about2" data-bs-toggle="pill" data-bs-target="#about-pills2" role="tab" aria-controls="about-pills2" aria-selected="false">
-<h3>100+</h3>
-<h6>Tour Guide</h6>
-</div>
-</li>
-<li class="nav-item" role="presentation">
-<div class="nav-link" id="pills-about3" data-bs-toggle="pill" data-bs-target="#about-pills3" role="tab" aria-controls="about-pills3" aria-selected="false">
-<h3>500+</h3>
- <h6>Travelar Connect</h6>
-</div>
-</li>
-</ul>
-</div>
-<div class="tab-content about-tab-content" id="pills-tabContent">
-<div class="tab-pane fade show active" id="about-pills1" role="tabpanel" aria-labelledby="pills-about1">
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.</p>
-</div>
-<div class="tab-pane fade" id="about-pills2" role="tabpanel" aria-labelledby="pills-about2">
-<p> Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit.</p>
-</div>
-<div class="tab-pane fade" id="about-pills3" role="tabpanel" aria-labelledby="pills-about3">
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
-consectetur.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row pt-100 align-items-center">
-<div class="col-lg-6">
-<div class="achievement-counter-wrap">
-<h2 class="about-wrap-title">
-Why Package Book With
-<span>TourX Pro?</span>
-</h2>
-<div class="achievement-counter-cards">
-<div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center ">
-<div class="counter-box mb-sm-0 mb-3">
-<h2>500+</h2>
-<h6>Awesome Tour</h6>
-</div>
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
-molestie turpis nec lacinia vehicula.</p>
-</div>
-<div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center">
-<div class="counter-box mb-3">
-<h2>300+</h2>
-<h6>Destinations</h6>
-</div>
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
-molestie turpis nec lacinia vehicula.</p>
-</div>
-<div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center">
-<div class="counter-box mb-3">
-<h2>150+</h2>
-<h6> Mountains</h6>
-</div>
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
-molestie turpis nec lacinia vehicula.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="about-image-group mt-5 mt-lg-0">
-<img src="assets/images/about/about-image-group2.png" alt="" class="img-fluid">
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="testimonial-area testimonial-style-one mt-120">
-<div class="testimonial-shape-group"></div>
-<div class="container position-relative">
-<div class="row align-items-center">
-<div class="col-lg-8">
-<div class="section-head-alpha">
-<h2>What Our Client Say About Us</h2>
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt
-blandit interdum. Sed pellentesque at nunc eget consectetur.</p>
-</div>
-</div>
-<div class="col-lg-4">
-<div class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3">
-<div class="testi-prev custom-swiper-prev" tabindex="0" role="button" aria-label="Previous slide"> <i class="bi bi-chevron-left"></i> </div>
-<div class="testi-next custom-swiper-next" tabindex="0" role="button" aria-label="Next slide"><i class="bi bi-chevron-right"></i></div>
-</div>
-</div>
-</div>
-<div class="swiper testimonial-slider-one position-relative">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<div class="testimonial-card testimonial-card-alpha">
-<div class="testimonial-overlay-img">
-<img src="assets/images/reviewer/reviewer-1.png" alt="">
-</div>
-<div class="testimonial-card-top">
-<div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
-<div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm1.png" alt=""></div>
-<h3 class="testimonial-count">01</h3>
-</div>
-<div class="testimonial-body">
-<p>Duis rutrum nisl urna. Maecenas vel libero this
-faucibus nisi venenatis hendrerit a id lectus.P
-Suspendissendt molestie turpis nec laciniane
-vehicula volutpat purus.</p>
-<div class="testimonial-bottom">
-<div class="reviewer-info">
-<h4 class="reviewer-name">Shwan Pull</h4>
-<h6>Traveller</h6>
-</div>
-<ul class="testimonial-rating">
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="testimonial-card testimonial-card-alpha">
-<div class="testimonial-overlay-img">
-<img src="assets/images/reviewer/reviewer-1.png" alt="">
-</div>
-<div class="testimonial-card-top">
-<div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
-<div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm2.png" alt=""></div>
-<h3 class="testimonial-count">02</h3>
-</div>
-<div class="testimonial-body">
-<p>Duis rutrum nisl urna. Maecenas vel libero this
-faucibus nisi venenatis hendrerit a id lectus.P
-Suspendissendt molestie turpis nec laciniane
-vehicula volutpat purus.</p>
-<div class="testimonial-bottom">
-<div class="reviewer-info">
-<h4 class="reviewer-name">Adam Groff</h4>
-<h6>Traveller</h6>
-</div>
-<ul class="testimonial-rating">
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="swiper-slide">
-<div class="testimonial-card testimonial-card-alpha">
-<div class="testimonial-overlay-img">
-<img src="assets/images/reviewer/reviewer-1.png" alt="">
-</div>
-<div class="testimonial-card-top">
-<div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
-<div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm3.png" alt=""></div>
-<h3 class="testimonial-count">03</h3>
-</div>
-<div class="testimonial-body">
-<p>Duis rutrum nisl urna. Maecenas vel libero this
-faucibus nisi venenatis hendrerit a id lectus.P
-Suspendissendt molestie turpis nec laciniane
-vehicula volutpat purus.</p>
-<div class="testimonial-bottom">
-<div class="reviewer-info">
-<h4 class="reviewer-name">Lilyan Danclark</h4>
-<h6>Traveller</h6>
-</div>
-<ul class="testimonial-rating">
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-<li><i class="bi bi-star-fill"></i></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="guide-area guide-style-one pt-110">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="section-head-gamma">
-<h2>Tour Guide</h2>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="guide-card-gamma">
-<div class="guide-image">
-<img src="assets/images/guide/guide-md4.png" alt="">
-<ul class="guide-social-links">
-<li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-<li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-<li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-</ul>
-<div class="contact-lavel">
-<a href="#">Contact</a>
-</div>
-</div>
-<div class="guide-content">
-<h4 class="guide-name">Sebastian
-Mateo</h4>
-<h6 class="guide-designation">Tour Guide</h6>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="guide-card-gamma">
-<div class="guide-image">
-<img src="assets/images/guide/guide-md5.png" alt="">
-<ul class="guide-social-links">
-<li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-<li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-<li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-</ul>
-<div class="contact-lavel">
-<a href="#">Contact</a>
-</div>
-</div>
-<div class="guide-content">
-<h4 class="guide-name">Theodore
-Aiden</h4>
-<h6 class="guide-designation">Tour Guide</h6>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="guide-card-gamma">
-<div class="guide-image">
-<img src="assets/images/guide/guide-md6.png" alt="">
-<ul class="guide-social-links">
-<li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-<li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-<li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-</ul>
-<div class="contact-lavel">
-<a href="#">Contact</a>
-</div>
-</div>
-<div class="guide-content">
-<h4 class="guide-name">Lincoln
-Anthony</h4>
-<h6 class="guide-designation">Tour Guide</h6>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="blog-area blog-style-two pt-120">
-<div class="container">
-<div class="row">
-<div class="col-lg-7">
-<div class="section-head-gamma text-start">
-<h2>Latest Blog</h2>
-</div>
-</div>
-<div class="col-lg-5">
-<div class="blog-btn text-lg-end"><a href="#" class="button-fill-round">View All</a></div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="blog-card-gamma">
-<div class="blog-thumb">
-<a href="blog-details.html">
-<img src="assets/images/blog/blog-md-1.png" alt="">
-</a>
-<div class="blog-lavel">
-<a href="#">Guide</a>
-</div>
-</div>
-<div class="blog-content">
-<div class="blog-body-top">
-<a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-<a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
-</div>
-<h4 class="blog-title"><a href="blog-details.html">vitae tempor convallis, mi ligula an
-suscipit nunc, ornare suscipit.</a></h4>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog-card-gamma">
-<div class="blog-thumb">
-<a href="blog-details.html">
-<img src="assets/images/blog/blog-md-2.png" alt="">
-</a>
-<div class="blog-lavel">
-<a href="#">Travel</a>
-</div>
-</div>
-<div class="blog-content">
-<div class="blog-body-top">
-<a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-<a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
-</div>
-<h4 class="blog-title"><a href="blog-details.html">Mauris commodo massa vel diamnat
-feugiat sagittis Nunc maxim.</a></h4>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="blog-card-gamma">
-<div class="blog-thumb">
-<a href="blog-details.html">
-<img src="assets/images/blog/blog-md-3.png" alt="">
-</a>
-<div class="blog-lavel">
-<a href="#">Tour</a>
-</div>
-</div>
-<div class="blog-content">
-<div class="blog-body-top">
-<a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
-<a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
-</div>
-<h4 class="blog-title"><a href="blog-details.html">Nulla urna leo, volutpat eu maurisa eget luctus malesuada urna.</a></h4>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="footer-area mt-110">
-<div class="footer-main-wrapper">
-<div class="footer-vactor">
-<img src="assets/images/banner/footer-bg.png" alt="">
-</div>
-<div class="container">
-<div class="row justify-content-center g-4">
-<div class="col-lg-4">
-<div class="footer-about text-lg-start text-center">
-<p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt molestie turpis nec lacinia vehicula.</p>
-<div class="footer-social-wrap">
-<h5>Follow Us On:</h5>
-<ul class="footer-social-links justify-content-lg-start justify-content-center">
-<li><a href="#"><i class="bx bxl-instagram"></i></a></li>
-<li><a href="#"><i class="bx bxl-facebook"></i></a></li>
-<li><a href="#"><i class="bx bxl-twitter"></i></a></li>
-<li><a href="#"><i class="bx bxl-whatsapp"></i></a></li>
-<li><a href="#"><i class='bx bxl-pinterest-alt'></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-2 col-md-4">
-<div class="footer-widget">
-<h4 class="footer-widget-title">Quick Link</h4>
-<ul class="footer-links">
-<li><a href="about.html">About Us</a></li>
-<li><a href="package.html">Tour Package</a></li>
-<li><a href="destination.html">Destination</a></li>
-<li><a href="guide.html">Tour Guide</a></li>
-<li><a href="package-details.html">Booking Process</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-2 col-md-4">
-<div class="footer-widget">
-<h4 class="footer-widget-title">Tour Type</h4>
-<ul class="footer-links">
-<li><a href="#">Wild & Adventure Tours</a></li>
-<li><a href="#">Group Tour</a></li>
-<li><a href="#">Seasonal Tours</a></li>
-<li><a href="#">Relaxation Tours</a></li>
-<li><a href="#">Family Friendly Tours</a></li>
-</ul>
-</div>
-</div>
-<div class="col-lg-4 col-md-8">
-<div class="footer-widget">
-<h4 class="footer-widget-title text-center">Gallery</h4>
-<div class="footer-gallary-grid">
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-1.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-1.png" alt=""></a>
-</div>
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-2.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-2.png" alt=""></a>
-</div>
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-3.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-3.png" alt=""></a>
-</div>
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-4.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-4.png" alt=""></a>
-</div>
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-5.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-5.png" alt=""></a>
-</div>
-<div class="footer-gallary-item">
-<a href="assets/images/gallary/fg-6.png" data-fancybox="footer" data-caption="Caption Here"><img src="assets/images/gallary/fg-6.png" alt=""></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-contact-wrapper">
-<h5>Contact Us:</h5>
-<ul class="footer-contact-list">
-<li><i class="bi bi-telephone-x"></i> <a href="tel:+17632275032">+1 763-227-5032</a></li>
-<li><i class="bi bi-envelope-open"></i> <a href="/cdn-cgi/l/email-protection#cea7a0a8a18ebaa1bbbcb6bebca1e0ada1a3"><span class="__cf_email__" data-cfemail="274e49414867534852555f5755480944484a">[email&#160;protected]</span></a></li>
-<li><i class="bi bi-geo-alt"></i> <a href="#">2752 Willison Street Eagan, United State</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="container">
-<div class="row align-items-center justify-content-center">
-<div class="col-lg-4 col-md-6 order-lg-1 order-3 ">
-<div class="copyright-link text-lg-start text-center">
-<p>Copyright 2021 TourXPro | Design By <a href="#"> Egens Lab</a></p>
-</div>
-</div>
-<div class="col-lg-4  order-lg-2 order-1">
-<div class="footer-logo text-center">
-<a href="index.html"><img src="assets/images/logo-w.png" alt=""></a>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 order-lg-3 order-2">
-<div class="policy-links">
-<ul class="policy-list justify-content-lg-end justify-content-center">
- <li><a href="#">Terms & Condition</a></li>
-<li><a href="#">Privacy Policy</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/chain_fade.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/jquery.fancybox.min.js"></script>
-<script src="assets/js/select2.min.js"></script>
-<script src="assets/js/jquery-ui.js"></script>
-
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+      {%include 'header2.html'%}
+      <div class="breadcrumb breadcrumb-style-one">
+         <div class="container">
+            <div class="col-lg-12 text-center">
+               <h2 class="breadcrumb-title">About Us</h2>
+               <ul class="d-flex justify-content-center breadcrumb-items">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">About Us</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="about-main-wrappper pt-100">
+         <div class="container">
+            <div class="about-tab-wrapper">
+               <div class="row justify-content-center align-items-center">
+                  <div class="col-lg-6">
+                     <div class="about-tab-image-grid text-center">
+                        <div class="about-video d-inline-block">
+                           <img src="assets/images/about/about-g2.png" alt="">
+                           <div class="video-overlay">
+                              <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-icon video-popup">
+                              <i class="bi bi-play-fill"></i>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="row float-images g-4">
+                           <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="about-image">
+                                 <img src="assets/images/about/about-g1.png" alt="">
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-sm-6">
+                              <div class="about-image">
+                                 <img src="assets/images/about/about-g3.png" alt="">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 mt-5 mt-lg-0">
+                     <div class="about-tab-wrap">
+                        <h2 class="about-wrap-title">
+                           About Our Company And <span>What We Are</span> Offer.
+                        </h2>
+                        <div class="about-tab-switcher">
+                           <ul class="nav nav-pills mb-3 justify-content-md-between justify-content-center" id="about-tab-pills" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                 <div class="nav-link active" id="pills-about1" data-bs-toggle="pill" data-bs-target="#about-pills1" role="tab" aria-controls="about-pills1" aria-selected="true">
+                                    <h3>10</h3>
+                                    <h6>Years Experience</h6>
+                                 </div>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                 <div class="nav-link" id="pills-about2" data-bs-toggle="pill" data-bs-target="#about-pills2" role="tab" aria-controls="about-pills2" aria-selected="false">
+                                    <h3>100+</h3>
+                                    <h6>Tour Guide</h6>
+                                 </div>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                 <div class="nav-link" id="pills-about3" data-bs-toggle="pill" data-bs-target="#about-pills3" role="tab" aria-controls="about-pills3" aria-selected="false">
+                                    <h3>500+</h3>
+                                    <h6>Travelar Connect</h6>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="tab-content about-tab-content" id="pills-tabContent">
+                           <div class="tab-pane fade show active" id="about-pills1" role="tabpanel" aria-labelledby="pills-about1">
+                              <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.
+                              </p>
+                           </div>
+                           <div class="tab-pane fade" id="about-pills2" role="tabpanel" aria-labelledby="pills-about2">
+                              <p> Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit.
+                              </p>
+                           </div>
+                           <div class="tab-pane fade" id="about-pills3" role="tabpanel" aria-labelledby="pills-about3">
+                              <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc eget consente
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt blandit interdum. Sed pellentesque at nunc
+                                 consectetur.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row pt-100 align-items-center">
+               <div class="col-lg-6">
+                  <div class="achievement-counter-wrap">
+                     <h2 class="about-wrap-title">
+                        Why Package Book With
+                        <span>TourX Pro?</span>
+                     </h2>
+                     <div class="achievement-counter-cards">
+                        <div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center ">
+                           <div class="counter-box mb-sm-0 mb-3">
+                              <h2>500+</h2>
+                              <h6>Awesome Tour</h6>
+                           </div>
+                           <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
+                              molestie turpis nec lacinia vehicula.
+                           </p>
+                        </div>
+                        <div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center">
+                           <div class="counter-box mb-3">
+                              <h2>300+</h2>
+                              <h6>Destinations</h6>
+                           </div>
+                           <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
+                              molestie turpis nec lacinia vehicula.
+                           </p>
+                        </div>
+                        <div class="achievement-counter-card flex-sm-row flex-column text-sm-start text-center">
+                           <div class="counter-box mb-3">
+                              <h2>150+</h2>
+                              <h6> Mountains</h6>
+                           </div>
+                           <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt enlane
+                              molestie turpis nec lacinia vehicula.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="about-image-group mt-5 mt-lg-0">
+                     <img src="assets/images/about/about-image-group2.png" alt="" class="img-fluid">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="testimonial-area testimonial-style-one mt-120">
+         <div class="testimonial-shape-group"></div>
+         <div class="container position-relative">
+            <div class="row align-items-center">
+               <div class="col-lg-8">
+                  <div class="section-head-alpha">
+                     <h2>What Our Client Say About Us</h2>
+                     <p>Duis rutrum nisl urna. Maecenas vel libero faucibus nisi venenatis hendrerit a id lectus. Suspendissendt
+                        blandit interdum. Sed pellentesque at nunc eget consectetur.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3">
+                     <div class="testi-prev custom-swiper-prev" tabindex="0" role="button" aria-label="Previous slide"> <i class="bi bi-chevron-left"></i> </div>
+                     <div class="testi-next custom-swiper-next" tabindex="0" role="button" aria-label="Next slide"><i class="bi bi-chevron-right"></i></div>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper testimonial-slider-one position-relative">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="testimonial-card testimonial-card-alpha">
+                        <div class="testimonial-overlay-img">
+                           <img src="assets/images/reviewer/reviewer-1.png" alt="">
+                        </div>
+                        <div class="testimonial-card-top">
+                           <div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
+                           <div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm1.png" alt=""></div>
+                           <h3 class="testimonial-count">01</h3>
+                        </div>
+                        <div class="testimonial-body">
+                           <p>Duis rutrum nisl urna. Maecenas vel libero this
+                              faucibus nisi venenatis hendrerit a id lectus.P
+                              Suspendissendt molestie turpis nec laciniane
+                              vehicula volutpat purus.
+                           </p>
+                           <div class="testimonial-bottom">
+                              <div class="reviewer-info">
+                                 <h4 class="reviewer-name">Shwan Pull</h4>
+                                 <h6>Traveller</h6>
+                              </div>
+                              <ul class="testimonial-rating">
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="testimonial-card testimonial-card-alpha">
+                        <div class="testimonial-overlay-img">
+                           <img src="assets/images/reviewer/reviewer-1.png" alt="">
+                        </div>
+                        <div class="testimonial-card-top">
+                           <div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
+                           <div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm2.png" alt=""></div>
+                           <h3 class="testimonial-count">02</h3>
+                        </div>
+                        <div class="testimonial-body">
+                           <p>Duis rutrum nisl urna. Maecenas vel libero this
+                              faucibus nisi venenatis hendrerit a id lectus.P
+                              Suspendissendt molestie turpis nec laciniane
+                              vehicula volutpat purus.
+                           </p>
+                           <div class="testimonial-bottom">
+                              <div class="reviewer-info">
+                                 <h4 class="reviewer-name">Adam Groff</h4>
+                                 <h6>Traveller</h6>
+                              </div>
+                              <ul class="testimonial-rating">
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="testimonial-card testimonial-card-alpha">
+                        <div class="testimonial-overlay-img">
+                           <img src="assets/images/reviewer/reviewer-1.png" alt="">
+                        </div>
+                        <div class="testimonial-card-top">
+                           <div class="qoute-icon"><i class='bx bxs-quote-left'></i></div>
+                           <div class="testimonial-thumb"><img src="assets/images/reviewer/r-sm3.png" alt=""></div>
+                           <h3 class="testimonial-count">03</h3>
+                        </div>
+                        <div class="testimonial-body">
+                           <p>Duis rutrum nisl urna. Maecenas vel libero this
+                              faucibus nisi venenatis hendrerit a id lectus.P
+                              Suspendissendt molestie turpis nec laciniane
+                              vehicula volutpat purus.
+                           </p>
+                           <div class="testimonial-bottom">
+                              <div class="reviewer-info">
+                                 <h4 class="reviewer-name">Lilyan Danclark</h4>
+                                 <h6>Traveller</h6>
+                              </div>
+                              <ul class="testimonial-rating">
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                                 <li><i class="bi bi-star-fill"></i></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="guide-area guide-style-one pt-110">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="section-head-gamma">
+                     <h2>Tour Guide</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <div class="guide-card-gamma">
+                     <div class="guide-image">
+                        <img src="assets/images/guide/guide-md4.png" alt="">
+                        <ul class="guide-social-links">
+                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        </ul>
+                        <div class="contact-lavel">
+                           <a href="#">Contact</a>
+                        </div>
+                     </div>
+                     <div class="guide-content">
+                        <h4 class="guide-name">Sebastian
+                           Mateo
+                        </h4>
+                        <h6 class="guide-designation">Tour Guide</h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="guide-card-gamma">
+                     <div class="guide-image">
+                        <img src="assets/images/guide/guide-md5.png" alt="">
+                        <ul class="guide-social-links">
+                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        </ul>
+                        <div class="contact-lavel">
+                           <a href="#">Contact</a>
+                        </div>
+                     </div>
+                     <div class="guide-content">
+                        <h4 class="guide-name">Theodore
+                           Aiden
+                        </h4>
+                        <h6 class="guide-designation">Tour Guide</h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="guide-card-gamma">
+                     <div class="guide-image">
+                        <img src="assets/images/guide/guide-md6.png" alt="">
+                        <ul class="guide-social-links">
+                           <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                           <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                        </ul>
+                        <div class="contact-lavel">
+                           <a href="#">Contact</a>
+                        </div>
+                     </div>
+                     <div class="guide-content">
+                        <h4 class="guide-name">Lincoln
+                           Anthony
+                        </h4>
+                        <h6 class="guide-designation">Tour Guide</h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="blog-area blog-style-two pt-120">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-7">
+                  <div class="section-head-gamma text-start">
+                     <h2>Latest Blog</h2>
+                  </div>
+               </div>
+               <div class="col-lg-5">
+                  <div class="blog-btn text-lg-end"><a href="#" class="button-fill-round">View All</a></div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <div class="blog-card-gamma">
+                     <div class="blog-thumb">
+                        <a href="blog-details.html">
+                        <img src="assets/images/blog/blog-md-1.png" alt="">
+                        </a>
+                        <div class="blog-lavel">
+                           <a href="#">Guide</a>
+                        </div>
+                     </div>
+                     <div class="blog-content">
+                        <div class="blog-body-top">
+                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
+                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
+                        </div>
+                        <h4 class="blog-title"><a href="blog-details.html">vitae tempor convallis, mi ligula an
+                           suscipit nunc, ornare suscipit.</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="blog-card-gamma">
+                     <div class="blog-thumb">
+                        <a href="blog-details.html">
+                        <img src="assets/images/blog/blog-md-2.png" alt="">
+                        </a>
+                        <div class="blog-lavel">
+                           <a href="#">Travel</a>
+                        </div>
+                     </div>
+                     <div class="blog-content">
+                        <div class="blog-body-top">
+                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
+                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
+                        </div>
+                        <h4 class="blog-title"><a href="blog-details.html">Mauris commodo massa vel diamnat
+                           feugiat sagittis Nunc maxim.</a>
+                        </h4>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="blog-card-gamma">
+                     <div class="blog-thumb">
+                        <a href="blog-details.html">
+                        <img src="assets/images/blog/blog-md-3.png" alt="">
+                        </a>
+                        <div class="blog-lavel">
+                           <a href="#">Tour</a>
+                        </div>
+                     </div>
+                     <div class="blog-content">
+                        <div class="blog-body-top">
+                           <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> By John Smith </a>
+                           <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> Novembar 16, 2021</a>
+                        </div>
+                        <h4 class="blog-title"><a href="blog-details.html">Nulla urna leo, volutpat eu maurisa eget luctus malesuada urna.</a></h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% include 'footer.html'%}
+{%endblock%}
