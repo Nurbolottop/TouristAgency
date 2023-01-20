@@ -10,15 +10,7 @@
                    <div class="mobile-menu d-flex ">
                       <div class="d-flex align-items-center">
                          <div class="nav-right-icons d-xl-none d-flex align-items-center ">
-                            <div class="user-dropdown">
-                               <i class='bx bx-user-circle'></i>
-                               <ul class="user-drop-list">
-                                  <li><a href="#">My Account</a></li>
-                                  <li><a href="#">Login</a></li>
-                                  <li><a href="#">Registration</a></li>
-                                  <li><a href="#">Setting</a></li>
-                               </ul>
-                            </div>
+                           
                             <div class="category-toggle"><i class='bx bx-category'></i></div>
                          </div>
                          <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
@@ -54,14 +46,14 @@
                          <ul class="sub-menu">
                             <li><a href="{% url 'teams'%}">Наша команда</a></li>
                             <li><a href="gallary.html">Галлерея</a></li>
-                            <li><a href="faq.html">Часто задаваемые вопросы</a></li>
+                            <li><a href="{% url 'faq'%}">Часто задаваемые вопросы</a></li>
                          </ul>
                       </li>
                       <li><a href="{% url 'contacts'%}">Наши контакты</a></li>
                    </ul>
                    <div class="inner-contact-options d-xl-none">
-                      <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></div>
-                      <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#8be2e5ede4cbeef3eae6fbe7eea5e8e4e6"><span class="__cf_email__" data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee">[email&#160;protected]</span></a></div>
+                      <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:{{contact.phone_site}}">{{contact.phone_site}}</a></div>
+                      <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a ><span class="__cf_email__" data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee">{{contact.email_site}}</span></a></div>
                    </div>
                 </nav>
              </div>
@@ -72,15 +64,14 @@
                          <img src="{% static 'assets/images/icons/header-phone.svg'%}" alt="">
                       </div>
                       <div class="hotline-info">
-                         <span>Hot Line Number</span>
-                         <h6><a href="tel:8801761111456">+880 176 1111 456</a></h6>
+                         <span>Горячая линия</span>
+                         <h6><a href="tel:8801761111456">{{contact.phone_site}}</a></h6>
                       </div>
                    </div>
                    <div class="nav-right-icons gap-3">
                       <div class="header-search search-btn">
                          <i class='bx bx-search-alt'></i>
                       </div>
-                      <div class="category-toggle"><i class='bx bx-category'></i></div>
                    </div>
                 </div>
              </div>
