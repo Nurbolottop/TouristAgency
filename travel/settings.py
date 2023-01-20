@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'apps.tickets',
     'apps.review',
     'apps.faq',
+    'apps.about',
+    
     
     
     
