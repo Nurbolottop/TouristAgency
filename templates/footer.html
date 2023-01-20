@@ -53,10 +53,11 @@
                 <div class="footer-widget">
                    <h4 class="footer-widget-title text-center">Галерея</h4>
                    <div class="footer-gallary-grid">
-                     
+                     {% for gallery in gallery%}
                       <div class="footer-gallary-item">
                          <a href="{{gallery.image.url}}" data-fancybox="footer" data-caption="Caption Here"><img src="{{gallery.image.url}}" alt=""></a>
                       </div>
+                      {%endfor%}
                    </div>
                 </div>
              </div>
