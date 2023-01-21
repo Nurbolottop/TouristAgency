@@ -162,7 +162,7 @@
                                              <h6>Жилье <span>{{tour.accommodation_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
-                                          <div class="rating-box" data-progress=""{{lesson.number}}%">
+                                          <div class="rating-box" data-progress="{{lesson.number}}">
                                              <h6>Транспорт <span>{{tour.transport_tour}}</span></h6>
                                              <div class="rating-bar"></div>
                                           </div>
@@ -184,114 +184,55 @@
                               </div>
                               <div class="comment-section">
                                  <ul class="comment-list">
+                                    {% for comment in tour.post_comment.all %}
                                     <li class="single-comment d-flex flex-sm-row flex-column ">
                                        <div class="commmentor">
-                                          <img src="{% static 'assets/images/reviewer/commertor2.png' %}" alt="">
+                                          <img src="{% static 'assets/images/reviewer/avater2.png' %}" alt="">
                                        </div>
                                        <div class="comment mt-4 mt-sm-0">
                                           <div class="d-flex align-items-center justify-content-between">
                                              <div class="info">
-                                                <h6>Silvia Perry</h6>
-                                                <span>2 April, 2021 10.00PM</span>
+                                                <h6>{{comment.name}}</h6>
+                                                <span>{{commet.created_time}}</span>
                                              </div>
-                                             <ul class="rating d-flex ">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                             </ul>
+                                             
                                           </div>
-                                          <p>Morbi dictum pulvinar velit, id mollis lorem faucibus acUt sed lacinia ipsum. cibuses acUt sed lacinia ipsum. Suspendisse </p>
+                                          <p>{{comment.message}}</p>
                                           <div class="reply-btn">
-                                             <a href="#"><i class="bi bi-reply-all-fill"></i> Reply</a>
+                                             <a ><i class="bi bi-reply-all-fill"></i>{{comment.email}}</a>
                                           </div>
                                        </div>
                                     </li>
-                                    <li class="single-comment d-flex flex-sm-row flex-column">
-                                       <div class="commmentor">
-                                          <img src="{% static 'assets/images/reviewer/commertor3.png' %}" alt="">
-                                       </div>
-                                       <div class="comment mt-4 mt-sm-0">
-                                          <div class="d-flex align-items-center justify-content-between">
-                                             <div class="info">
-                                                <h6>Lilyan Antu</h6>
-                                                <span>2 April, 2021 10.00PM</span>
-                                             </div>
-                                             <ul class="rating d-flex ">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                             </ul>
-                                          </div>
-                                          <p>Morbi dictum pulvinar velit, id mollis lorem faucibus acUt sed lacinia ipsum. cibuses acUt sed lacinia ipsum. Suspendisse </p>
-                                          <div class="reply-btn">
-                                             <a href="#"><i class="bi bi-reply-all-fill"></i> Reply</a>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li class="single-comment d-flex flex-sm-row flex-column">
-                                       <div class="commmentor">
-                                          <img src="{% static 'assets/images/reviewer/commertor1.png' %}" alt="">
-                                       </div>
-                                       <div class="comment mt-4 mt-sm-0">
-                                          <div class="d-flex align-items-center justify-content-between">
-                                             <div class="info">
-                                                <h6>Adama Grof</h6>
-                                                <span>2 April, 2021 10.00PM</span>
-                                             </div>
-                                             <ul class="rating d-flex ">
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                             </ul>
-                                          </div>
-                                          <p>Morbi dictum pulvinar velit, id mollis lorem faucibus acUt sed lacinia ipsum. cibuses acUt sed lacinia ipsum. Suspendisse </p>
-                                          <div class="reply-btn">
-                                             <a href="#"><i class="bi bi-reply-all-fill"></i> Reply</a>
-                                          </div>
-                                       </div>
-                                    </li>
+                                    {%endfor%}
                                  </ul>
                                  <div class="comment-btn text-center">
                                     <a href="#">View All Comment</a>
                                  </div>
                               </div>
-                              <form action="#" id="comment_form" method="post">
+                              <form  method="POST">
+                                 {% csrf_token%}
                                  <div class="comment-form mt-110">
-                                    <h4>Leave Your Comment</h4>
+                                    <h4>Оставьте свой комментарий</h4>
                                     <div class="row">
                                        <div class="col-lg-6">
                                           <div class="custom-input-group">
-                                             <input type="text" placeholder="Your Full Name" id="name1">
+                                             <input type="text" placeholder="Ваше имя" name="name">
                                           </div>
                                        </div>
                                        <div class="col-lg-6">
                                           <div class="custom-input-group">
-                                             <input type="text" placeholder="Your Email" id="email1">
+                                             <input type="email" placeholder="Ваша почта" name="email">
                                           </div>
                                        </div>
                                     </div>
+                                    
                                     <div class="custom-input-group">
-                                       <input type="text" placeholder="Tour Type" id="type">
+                                       <textarea cols="20" name = "message" rows="7" placeholder="Ваш комментарий"></textarea>
                                     </div>
-                                    <div class="custom-input-group">
-                                       <textarea cols="20" rows="7" placeholder="Write Message"></textarea>
-                                    </div>
-                                    <ul class="form-rating d-flex">
-                                       <li><i class="bi bi-star"></i></li>
-                                       <li><i class="bi bi-star"></i></li>
-                                       <li><i class="bi bi-star"></i></li>
-                                       <li><i class="bi bi-star"></i></li>
-                                       <li><i class="bi bi-star"></i></li>
-                                    </ul>
+                                    
                                     <div class="custom-input-group">
                                        <div class="submite-btn">
-                                          <button type="submit">Send Message</button>
+                                          <button type="submit">Отправить сообщение</button>
                                        </div>
                                     </div>
                                  </div>
@@ -467,7 +408,6 @@
                                  </div>
                                  <div class="col-12">
                                     <div class="package-gallary-item">
-                                       <a href="{% static 'assets/images/gallary/pgx-3.png' %}" data-fancybox="gallery" data-caption="Caption Here"><img src="{% static 'assets/images/gallary/pgx-3.png' %}" alt=""></a>
                                     </div>
                                  </div>
                               </div>
@@ -553,70 +493,26 @@
                      </aside>
                      <aside class="package-widget-style-2 widget-recent-package-entries mt-30">
                         <div class="widget-title text-center">
-                           <h4>Offer Package</h4>
+                           <h4>Пакет предложений</h4>
                         </div>
                         <div class="widget-body">
                            <ul>
+                              {% for tour in random_tour%}
                               <li class="package-sm">
                                  <div class="thumb">
-                                    <a href="package-details.html">
-                                    <img src="{% static 'assets/images/package/package-sm4.png' %}" alt="">
+                                    <a href="{%url 'tour_detail' tour.id%}">
+                                    <img src="{{tour.image_tour.url}}" alt="">
                                     </a>
                                  </div>
                                  <div class="info">
-                                    <h6><a href="package-details.html">San Francisco Golden Gate Bridge, cable cars & fog</a></h6>
+                                    <h6><a href="{%url 'tour_detail' tour.id%}">{{tour.name_tour}}</a></h6>
                                     <div class="price">
-                                       <span>From</span>
-                                       <h6>$67.00 <span>Per Person</span></h6>
+                                       <span>Для</span>
+                                       <h6><span>одного человека</span> {{tour.price_tour}}</h6>
                                     </div>
                                  </div>
                               </li>
-                              <li class="package-sm">
-                                 <div class="thumb">
-                                    <a href="package-details.html">
-                                    <img src="{% static 'assets/images/package/package-sm3.png' %}" alt="">
-                                    </a>
-                                 </div>
-                                 <div class="info">
-                                    <h6><a href="package-details.html">Praesent porttitor tellus sed ande
-                                       ultrices pulvinar magna mauris.</a>
-                                    </h6>
-                                    <div class="price">
-                                       <span>From</span>
-                                       <h6>$88.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="package-sm">
-                                 <div class="thumb">
-                                    <a href="package-details.html">
-                                    <img src="{% static 'assets/images/package/package-sm2.png' %}" alt="">
-                                    </a>
-                                 </div>
-                                 <div class="info">
-                                    <h6><a href="package-details.html">Vestibulum luctus hendrerit vitae
-                                       neque, et blandit orci tincidunt.</a>
-                                    </h6>
-                                    <div class="price">
-                                       <span>From</span>
-                                       <h6>$91.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="package-sm">
-                                 <div class="thumb">
-                                    <a href="package-details.html">
-                                    <img src="{% static 'assets/images/package/package-sm1.png' %}" alt="">
-                                    </a>
-                                 </div>
-                                 <div class="info">
-                                    <h6><a href="package-details.html">San Francisco Golden Gate Bridge, cable cars & fog</a></h6>
-                                    <div class="price">
-                                       <span>From</span>
-                                       <h6>$67.00 <span>Per Person</span></h6>
-                                    </div>
-                                 </div>
-                              </li>
+                              {%endfor%}
                            </ul>
                         </div>
                      </aside>

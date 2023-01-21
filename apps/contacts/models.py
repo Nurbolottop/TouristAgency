@@ -22,13 +22,13 @@ class Contacts(models.Model):
 class Contact_detail(models.Model):
     name = models.CharField(max_length=245,verbose_name="Имя")
     email = models.EmailField(verbose_name="Почта")
-    question = models.TextField(verbose_name="Вопрос")
+    message = models.TextField(verbose_name="Вопрос")
     
     def _str__(self):
         return self.name
     
     class Meta:
-        verbose_name = "Обратные свяьи"
-        verbose_name_plural = "Обратную связь"
+        verbose_name = "Обратную связь"
+        verbose_name_plural = "Обратные связьи"
     
     

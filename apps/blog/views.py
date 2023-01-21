@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from apps.settings.models import Settings
 from apps.contacts.models import Contacts
-from apps.blog.models import Blog
+from apps.blog.models import Blog,Comment
 from apps.gallery.models import Gallery
 
 # Create your views here.
@@ -25,6 +25,13 @@ def blog_detail(request,id):
     contact = Contacts.objects.latest('id')
     blog = Blog.objects.get(id = id)
     gallery = Gallery.objects.all()
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        
+        comment = Comment.objects.create(name = name,email = email, message = message,post = blog )
+        return redirect('blog_detail' , blog.id)
     
     context = {
         'settings':settings,

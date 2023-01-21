@@ -77,30 +77,30 @@
             </div>
          </div>
          <div class="container mt-120">
-            <form action="#" id="contact_form">
+            <form  name="contact_form" method = "POST">
+               {%csrf_token%}
                <div class="contact-form-wrap">
-                  <h4>Get a free Keystroke quote now</h4>
-                  <p>Your email address will not be published. Required fields are marked *</p>
+                  <h4>Свяжитесь с нами/h4>
                   <div class="row">
                      <div class="col-lg-6">
                         <div class="custom-input-group">
-                           <label for="name">Name</label>
-                           <input type="text" placeholder="Your name" id="name">
+                           <label for="name">Имя</label>
+                           <input type="text" placeholder="Ваше имя" name="name">
                         </div>
                      </div>
                      <div class="col-lg-6">
                         <div class="custom-input-group">
-                           <label for="email">Email</label>
-                           <input type="text" placeholder="Your Email" id="email">
+                           <label for="email">Почта</label>
+                           <input type="text" placeholder="Ваша почта" name="email">
                         </div>
                      </div>
                   </div>
                   <div class="custom-input-group">
-                     <textarea cols="20" rows="7" placeholder="Your message"></textarea>
+                     <textarea cols="20" rows="7" name = "message" placeholder="Ваше сообщение"></textarea>
                   </div>
                   <div class="custom-input-group">
                      <div class="submite-btn">
-                        <button type="submit">Send Message</button>
+                        <button type="submit">Отправить сообщение</button>
                      </div>
                   </div>
                </div>

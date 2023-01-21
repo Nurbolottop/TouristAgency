@@ -14,4 +14,16 @@ class Blog(models.Model):
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
-    
+
+class Comment(models.Model):
+    name = models.CharField(max_length=255,verbose_name="Имя")
+    email = models.EmailField(verbose_name="Почта")
+    message = models.TextField(verbose_name="Коментарий")
+    post = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="post_comment")
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        ordering = ("-created",)

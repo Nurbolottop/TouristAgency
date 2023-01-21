@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from apps.tours.models import Tours
+from django.shortcuts import render,redirect
+
+from apps.tours.models import Tours,Comment
 from apps.settings.models import Settings
 from apps.contacts.models import Contacts
 from apps.gallery.models import Gallery
@@ -25,13 +26,24 @@ def tour_detail(request,id):
     tour = Tours.objects.get(id = id)   
     contact = Contacts.objects.latest('id')
     gallery = Gallery.objects.all()
-    
+    random_tour = Tours.objects.all().order_by('?')
     settings = Settings.objects.latest('id')
+    
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        
+        comment = Comment.objects.create(name = name,email = email, message = message,post = tour )
+        return redirect('tour_detail' , tour.id)
+
     context = {
         'settings':settings,
         'tour':tour,
         'contact': contact,
         'gallery':gallery,
+        'random_tour':random_tour,
+        
 
     }
     return render(request,'package-details.html',context)
