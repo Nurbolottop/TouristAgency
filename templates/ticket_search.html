@@ -1,0 +1,43 @@
+{%extends "homepage.html"%}
+{%load static %}
+{%block content%}
+   {%include 'ticket_header.html'%}
+      <div class="breadcrumb breadcrumb-style-one">
+         <div class="container">
+            <div class="col-lg-12 text-center">
+               <h2 class="breadcrumb-title">Билеты</h2>
+               <ul class="d-flex justify-content-center breadcrumb-items">
+                  <li class="breadcrumb-item"><a href="{%url 'index'%}">Домой</a></li>
+                  <li class="breadcrumb-item active">Билеты</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="destination-wrapper pt-110">
+         <div class="container">
+            <div class="row g-3">
+                {%for ticket in product%}
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="destination-card-style-two">
+                        <div class="d-card-thumb">
+                           <img src="{{ticket.image_ticket.url}}" alt="">
+                        </div>
+                        <div class="d-card-content">
+                           <h4 class="destination-title"><a href="{% url 'tickets_detail' ticket.id%}">{{ticket.title}}</a></h4>
+                           <div class="place-count" >
+                              <a class="nurbolot" href="{% url 'tickets_detail' ticket.id%}">
+                                 <h6>{{ticket.price_ticket}}</h6>
+                              </a>
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               {%endfor%}
+               
+            </div>
+            
+         </div>
+      </div>
+      {%include 'footer.html'%}
+{%endblock%}

@@ -1,0 +1,151 @@
+{%load static%}
+<div class="preloader">
+   <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
+</div>
+
+
+
+
+<div class="topbar-area topbar-style-one">
+   <div class="container">
+      <div class="row">
+         <div class="col-xl-4 align-items-center d-xl-flex d-none">
+            <div class="topbar-contact-left">
+               <ul class="contact-list">
+                  <li><i class="bi bi-telephone-fill"></i> <a >{{contact.phone_site}}</a></li>
+                  <li><i class="bi bi-envelope-fill"></i> <a ><span class="__cf_email__" data-cfemail="ea83848c85aa8f928b879a868fc4898587">{{contact.email_site}}</span></a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-xl-5 col-lg-6 col-md-6 text-xl-center text-md-start text-center">
+            <div class="topbar-ad">
+               <a href="{% url 'about'%}">Узнать больше о нас</a>
+            </div>
+         </div>
+         <div class="col-xl-3 col-lg-6 col-md-6 d-md-flex  d-none align-items-center justify-content-end">
+            <ul class="topbar-social-links">
+               {%if contact.instagram_site%}
+
+                        <li><a href="{{contact.instagram_site}}"><i class="bx bxl-instagram"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.facebook_site%}
+
+                        <li><a href="{{contact.facebook_site}}"><i class="bx bxl-facebook"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.youtube_site%}
+
+                        <li><a href="{{contact.youtube_site}}"><i class="bx bxl-youtube"></i></a></li>
+                        {%endif%}
+
+                        {%if contact.whatsapp_site%}
+
+                        <li><a href="{{contact.whatsapp_site}}"><i class="bx bxl-whatsapp"></i></a></li>
+                        {%endif%}
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<header>
+    <div class="header-area header-style-one">
+       <div class="container">
+          <div class="row">
+             <div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block">
+                <div class="nav-logo d-flex justify-content-between align-items-center">
+                   <a href="{% url 'index'%}"><img src="{{settings.logo_site.url}}" width ="100px"  alt="logo"></a>
+                   <div class="d-flex align-items-center gap-4">
+                      <div class="nav-right d-xl-none">
+                         <ul class="nav-actions">
+                            <li class="category-toggle">
+                               <i class='bx bx-category'></i>
+                            </li>
+                            
+                         </ul>
+                      </div>
+                      <div class="mobile-menu d-flex ">
+                         <a href="javascript:void(0)" class="hamburger d-block d-xl-none">
+                         <span class="h-top"></span>
+                         <span class="h-middle"></span>
+                         <span class="h-bottom"></span>
+                         </a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
+                <nav class="main-nav float-end">
+                   <div class="inner-logo d-xl-none text-center">
+                     <a href="#"><img src="{{settings.logo_site.url}}" alt=""></a>
+
+                   </div>
+                   <ul>
+                     <li >
+                        <a href="{% url 'index'%}">Домой</a>
+                        
+                    </li>
+                    <li><a href="{% url 'about'%}">О нас</a></li>
+                    <li><a href="{% url 'tickets'%}">Ж/Д билеты</a></li>
+                    <li>
+                        <a href="{% url 'tour'%}">Заказат тур </a>
+                    </li>
+                      <li >
+                         <a href="{% url 'blog'%}">Новости</a>
+                      </li>
+                      <li class="has-child-menu">
+                         <a href="javascript:void(0)">Страницы</a>
+                         <i class="fl flaticon-plus">+</i>
+                         <ul class="sub-menu">
+                            <li><a href="{% url 'teams'%}">Наша команда</a></li>
+                            <li><a href="{% url 'gallery'%}">Галлерея</a></li>
+                            <li><a href="{% url 'faq'%}">Часто задаваемые вопросы</a></li>
+                            <li><a href="{% url 'contacts'%}">Наши контакты</a></li>
+
+                         </ul>
+                      </li>
+                   </ul>
+                   <div class="inner-contact-options d-xl-none">
+                      <div class="contact-box-inner"><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></div>
+                      <div class="contact-box-inner"><i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection#89e0e7efe6c9ecf1e8e4f9e5eca7eae6e4"><span class="__cf_email__" data-cfemail="c3aaada5ac83a6bba2aeb3afa6eda0acae">[email&#160;protected]</span></a></div>
+                   </div>
+                </nav>
+             </div>
+            
+
+             <div class="col-xl-2">
+                <div class="nav-right float-end d-xl-flex d-none ">
+                   <ul class="nav-actions" >
+                      <li class = "header-search search-btn">
+                         <i class='bx bx-search-alt'></i>
+                      </li>
+                   </ul>
+                </div>
+             </div>
+            <form role = 'search' action = "{%url 'blog_search' %}"
+
+               <div class="mobile-search">
+                  <div class="container">
+                     <div class="row d-flex justify-content-center">
+                        <div class="col-md-11">
+                           <label>Что вы ищете?</label>
+                           <input type="text" name = "key" placeholder="Поиск">
+                        </div>
+                        <div class="col-1 d-flexr
+                              <i class="bi bi-x"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </form>
+
+          </div>
+       </div>
+    </div>
+ </header>

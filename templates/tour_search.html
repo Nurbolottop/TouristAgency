@@ -1,0 +1,51 @@
+{% extends 'homepage.html'%}
+{% load static %}
+{% block content %}
+
+      {%include 'tours_header.html'%}
+      <div class="breadcrumb breadcrumb-style-one">
+         <div class="container">
+            <div class="col-lg-12 text-center">
+               <h2 class="breadcrumb-title">Заказать тур</h2>
+               <ul class="d-flex justify-content-center breadcrumb-items">
+                  <li class="breadcrumb-item"><a href="{% url 'index'%}">Домой</a></li>
+                  <li class="breadcrumb-item active">Заказать тур</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="package-wrapper pt-80">
+         <div class="container">
+            <div class="row">
+               {%for tour in product%}
+               <div class="col-lg-4 col-md-6">
+                  <div class="package-card-alpha">
+                     <div class="package-thumb">
+                        <a href="{%url 'tour_detail' tour.id%}"><img src="{{tour.image_tour.url}}" alt=""></a>
+                        <p class="card-lavel">
+                           <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
+                        </p>
+                     </div>
+                     <div class="package-card-body">
+                        <h3 class="p-card-title"><a href="{%url 'tour_detail' tour.id%}">{{tour.title}}</a>
+                        </h3>
+                        <div class="p-card-bottom">
+                           <div class="book-btn">
+                              <a href="{%url 'tour_detail' tour.id%}">Посмотреть<i class='bx bxs-right-arrow-alt'></i></a>
+                           </div>
+                           <div class="p-card-info">
+                              <span>Для</span>
+                              <h6><span>Одного человека</span>{{tour.price_tour}}</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               {%endfor%}
+            </div>
+            
+         </div>
+      </div>
+      {% include 'footer.html'%}
+
+{%endblock%}

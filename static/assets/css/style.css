@@ -4209,6 +4209,18 @@ header .header-style-four .nav-right .nav-right-hotline .hotline-info h6 a{
     transition:all .3s;
     position:relative;
     padding-bottom:8px
+
+}
+.nurbolot{
+    font-weight:700;
+    font-size:25px;
+    letter-spacing:.02em;
+    color:#fff;
+    font-family:var(--f-secondary);
+    transform:translateY(25px);
+    transition:all .3s;
+    position:relative;
+    padding-bottom:8px
 }
 .destination-card-style-two .d-card-content .destination-title::before{
     position:absolute;

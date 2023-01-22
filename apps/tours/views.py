@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.db.models import Q
 
 from apps.tours.models import Tours,Comment
 from apps.settings.models import Settings
@@ -43,7 +44,21 @@ def tour_detail(request,id):
         'contact': contact,
         'gallery':gallery,
         'random_tour':random_tour,
-        
-
     }
     return render(request,'package-details.html',context)
+
+def tour_search(request):
+    product = Tours.objects.all()
+    settings = Settings.objects.latest('id')
+    contact = Contacts.objects.latest('id')
+    gallery = Gallery.objects.all()
+    search_key = request.GET.get('key')
+    if search_key:
+        product  = Tours.objects.filter(Q(title__icontains =search_key))
+    context= {
+        'settings': settings,
+        'product':product,
+        'contact':contact,
+        'gallery':gallery,
+    }
+    return render(request, 'tour_search.html', context)

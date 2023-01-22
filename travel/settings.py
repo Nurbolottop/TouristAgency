@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'apps.faq',
     'apps.about',
     'apps.gallery',
+    'apps.index_search',
+    
     
     
     

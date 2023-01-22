@@ -1,7 +1,7 @@
 {%extends 'homepage.html'%}
 {%load static%}
 {%block content%}
-      {% include 'header2.html'%}
+      {% include 'blog_header.html'%}
       <div class="breadcrumb breadcrumb-style-one">
          <div class="container">
             <div class="col-lg-12 text-center">
@@ -32,7 +32,7 @@
                            <a href="{% url 'blog_detail' blog.id%}" class="blog-comments"><i class="bi bi-calendar3"></i>{{blog.blog_time}}</a>
                            <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> {{settings.name_site}} </a>
                         </div>
-                        <h4 class="blog-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.blog_name}}</a></h4>
+                        <h4 class="blog-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.title}}</a></h4>
                      </div>
                   </div>
                </div>

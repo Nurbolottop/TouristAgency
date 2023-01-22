@@ -20,8 +20,6 @@ def index(request):
     review = Review.objects.all()
     gallery = Gallery.objects.all()
     
-    
-    
     context = {
         'settings':settings,
         'tour':tour,
@@ -32,9 +30,5 @@ def index(request):
         'tickets':tickets,
         'review':review,
         'gallery':gallery,
-        
-        
-        
-        
     }
     return render(request, 'index3.html', context)

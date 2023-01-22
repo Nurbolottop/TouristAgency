@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Tours(models.Model):
     image_tour = models.ImageField(upload_to="Tours", verbose_name="Фотография тура")
-    name_tour = models.CharField(max_length=255,verbose_name="Название тура")
+    title = models.CharField(max_length=255,verbose_name="Название тура")
     
     description_tour = models.TextField(verbose_name="Описание тура")
     time_tour = models.CharField(max_length=255,verbose_name="Время тура")
@@ -27,7 +27,7 @@ class Tours(models.Model):
     food_tour = models.CharField(max_length=255,verbose_name="Оценка еды")
     
     def __str__(self):
-        return self.name_tour
+        return self.title   
     
     class Meta:
         verbose_name = "Тур"

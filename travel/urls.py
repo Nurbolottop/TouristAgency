@@ -19,11 +19,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from apps.settings.views import index
-from apps.tours.views import tour,tour_detail
+from apps.tours.views import tour,tour_detail,tour_search
 from apps.contacts.views import contacts
-from apps.blog.views import blog_detail,blog
+from apps.blog.views import blog_detail,blog,blog_search
 from apps.team.views import teams
-from apps.tickets.views import tickets,tickets_detail
+from apps.tickets.views import tickets,tickets_detail,ticket_search
 from apps.review.views import review
 from apps.faq.views import faq
 from apps.about.views import about
@@ -46,6 +46,11 @@ urlpatterns = [
     path('faq/', faq, name="faq"),
     path('about/', about, name="about"),
     path('gallery/', gallery, name="gallery"),
+    path('ticket/search/', ticket_search, name="ticket_search"),
+    path('blog/search/', blog_search, name="blog_search"),
+    path('tour/search/', tour_search, name="tour_search"),
+    
+    
     
     
     

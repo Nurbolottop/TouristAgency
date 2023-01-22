@@ -3,21 +3,7 @@
 {%load static %}
 {%block content%}
 
-<div class="mobile-search">
-   <div class="container">
-      <div class="row d-flex justify-content-center">
-         <div class="col-md-11">
-            <label>Что вы ищете?</label>
-            <input type="text" placeholder="Search Products, Category, Brand">
-         </div>
-         <div class="col-1 d-flex justify-content-end align-items-center">
-            <div class="search-cross-btn">
-               <i class="bi bi-x"></i>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+
 
       {%include "header.html"%}
       <div class="hero-area hero-style-three">
@@ -195,30 +181,30 @@
             </div>
             <div class="row d-flex justify-content-center g-4">
                {%for tour in tour%}
-               <div class="col-lg-4 col-md-6 col-sm-10  fadeffect">
-                  <div class="package-card-beta">
-                     <div class="package-thumb">
-                        <a href="{% url 'tour_detail' tour.id%}"><img src="{{tour.image_tour.url}}" alt=""></a>
-                        <p class="card-lavel">
-                           <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
-                        </p>
-                     </div>
-                     <div class="package-card-body">
-                        <h3 class="p-card-title"><a href="{% url 'tour_detail' tour.id%}">{{tour.name_tour}}</a>
-                        </h3>
-                        <div class="p-card-bottom">
-                           <div class="book-btn">
-                              <a href="{% url 'tour_detail' tour.id%}">Посмотреть <i class='bx bxs-right-arrow-alt'></i></a>
-                           </div>
-                           <div class="p-card-info">
-                              <span>Для</span>
-                              <h6><span>Одного человека</span>{{tour.price_tour}}</h6>
+                  <div class="col-lg-4 col-md-6 col-sm-10  fadeffect">
+                     <div class="package-card-beta">
+                        <div class="package-thumb">
+                           <a href="{% url 'tour_detail' tour.id%}"><img src="{{tour.image_tour.url}}" alt=""></a>
+                           <p class="card-lavel">
+                              <i class="bi bi-clock"></i> <span>{{tour.time_tour}}</span>
+                           </p>
+                        </div>
+                        <div class="package-card-body">
+                           <h3 class="p-card-title"><a href="{% url 'tour_detail' tour.id%}">{{tour.title}}</a>
+                           </h3>
+                           <div class="p-card-bottom">
+                              <div class="book-btn">
+                                 <a href="{% url 'tour_detail' tour.id%}">Посмотреть <i class='bx bxs-right-arrow-alt'></i></a>
+                              </div>
+                              <div class="p-card-info">
+                                 <span>Для</span>
+                                 <h6><span>Одного человека</span>{{tour.price_tour}}</h6>
 
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-               </div>
                {%endfor%}
             </div>
             <div class="package-page-btn text-center mt-60">
@@ -245,7 +231,7 @@
                      <div class="destination-overlay">
                         <div class="content">
                            <a href="{% url 'tickets_detail' ticket.id%}">
-                              <h5>{{ticket.name_ticket}}</h5>
+                              <h5>{{ticket.title}}</h5>
                            </a>
                            <a href="{% url 'tickets_detail' ticket.id%}">
                               <h6>{{ticket.price_ticket}}</h6>
@@ -289,7 +275,7 @@
                               </div>
                               
                               <div class="package-card-body">
-                                 <h3 class="p-card-title"><a href="{%url 'tour_detail' tour.id%}">{{tour.name_tour}}</a>
+                                 <h3 class="p-card-title"><a href="{%url 'tour_detail' tour.id%}">{{tour.title}}</a>
                                  </h3>
                                  <div class="p-card-bottom">
                                     <div class="book-btn">
@@ -414,7 +400,7 @@
                         </ul>
                      </div>
                      <div class="guide-content">
-                        <a href="guide.html">
+                        <a >
                            <h4 class="guide-name">{{team.team_name}}
                            </h4>
                         </a>
@@ -457,7 +443,7 @@
                            <a href="#" class="blog-writer"><i class="bi bi-person-circle"></i> {{settings.name_site}} </a>
                            <a href="#" class="blog-comments"><i class="bi bi-calendar3"></i> {{blog.blog_time}}</a>
                         </div>
-                        <h4 class="blog-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.blog_name}}</a>
+                        <h4 class="blog-title"><a href="{% url 'blog_detail' blog.id%}">{{blog.title}}</a>
                         </h4>
                      </div>
                   </div>

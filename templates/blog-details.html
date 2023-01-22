@@ -36,7 +36,7 @@
                   </div>
                   <div class="comment-section">
                      <ul class="comment-list">
-                        {% for comment in tour.post_comment.all %}
+                        {% for comment in blog.post_comment.all %}
                         <li class="single-comment d-flex flex-sm-row flex-column ">
                            <div class="commmentor">
                               <img src="{% static 'assets/images/reviewer/avater2.png' %}" alt="">
@@ -45,7 +45,7 @@
                               <div class="d-flex align-items-center justify-content-between">
                                  <div class="info">
                                     <h6>{{comment.name}}</h6>
-                                    <span>{{commet.created_time}}</span>
+                                    <span>{{comment.created}}</span>
                                  </div>
                                  
                               </div>
@@ -57,9 +57,7 @@
                         </li>
                         {%endfor%}
                      </ul>
-                     <div class="comment-btn text-center">
-                        <a href="#">View All Comment</a>
-                     </div>
+                     
                   </div>
                   <form  method="POST">
                      {% csrf_token%}
