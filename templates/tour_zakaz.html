@@ -1,0 +1,51 @@
+{% extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+
+      {%include 'header2.html'%}
+      <div class="breadcrumb breadcrumb-style-one">
+         <div class="container">
+            <div class="col-lg-12 text-center">
+               <h2 class="breadcrumb-title">Наши контакты</h2>
+               <ul class="d-flex justify-content-center breadcrumb-items">
+                  <li class="breadcrumb-item"><a href="{% url 'index'%}">Домой</a></li>
+                  <li class="breadcrumb-item active">Наши контакты</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="contact-wrapper pt-100">
+         
+         <div class="container mt-120">
+            <form  name="contact_form" method = "POST">
+               {%csrf_token%}
+               <div class="contact-form-wrap">
+                  <h4>Свяжитесь с нами</h4>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="custom-input-group">
+                           <label for="name">Имя</label>
+                           <input type="text" placeholder="Ваше имя" name="name">
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="custom-input-group">
+                           <label for="email">Почта</label>
+                           <input type="text" placeholder="Ваша почта" name="email">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="custom-input-group">
+                     <textarea cols="20" rows="7" name = "message" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <div class="custom-input-group">
+                     <div class="submite-btn">
+                        <button type="submit">Отправить сообщение</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      {% include 'footer.html'%}
+{%endblock%}

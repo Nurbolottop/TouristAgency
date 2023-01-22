@@ -30,5 +30,6 @@ def index(request):
         'tickets':tickets,
         'review':review,
         'gallery':gallery,
+        
     }
     return render(request, 'index3.html', context)
